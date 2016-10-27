@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cybe</string>
+    <string name="action_settings">Settings</string>
+    <string name="facebook_app_id">664985396998887</string>
+    <string name="problem_inlogin_with_facebook">আপনার ফেসবুক লগইনে সমস্যা হচ্ছে, অন্য অপশন চেষ্টা করুন </string>
+
+</resources>
