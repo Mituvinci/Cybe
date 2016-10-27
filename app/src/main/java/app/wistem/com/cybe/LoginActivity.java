@@ -1,5 +1,6 @@
 package app.wistem.com.cybe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,7 @@ import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.Profile;
+import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
@@ -33,6 +35,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
 
         setContentView(R.layout.activity_login);
         facebookLoginButton = (LoginButton) findViewById(R.id.login_button);
@@ -102,5 +105,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (view == facebookBtn) {
             facebookLoginButton.performClick();
         }
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        //Log.d("google3",checkinsignin+"");
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+        startActivity( new Intent(LoginActivity.this, DashBoardActivity.class));
     }
 }

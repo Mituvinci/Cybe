@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:text="Cybe"
+        android:text="Welcome to Cybe"
         android:textSize="30sp"/>
 
     <LinearLayout
