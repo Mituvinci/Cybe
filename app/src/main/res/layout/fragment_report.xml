@@ -134,6 +134,7 @@
                         android:textSize="16sp" />
 
                     <EditText
+                        android:id="@+id/textViewSummarize"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_marginTop="16dp"
@@ -141,6 +142,7 @@
                         android:hint="  Write here.."
                         android:textSize="16sp" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -157,16 +159,17 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:weightSum="3"
                         android:layout_height="60dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:weightSum="3">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_marginTop="16dp"
+                            android:layout_weight="1"
                             android:text="Audio Record"
-                            android:layout_weight="1"
+                            android:layout_marginLeft="3dp"
                             android:textColor="#000000"
                             android:textSize="16sp" />
 
@@ -174,8 +177,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_marginTop="16dp"
+                            android:layout_weight="1"
                             android:text="Video Record"
-                            android:layout_weight="1"
+                            android:layout_marginLeft="3dp"
                             android:textColor="#000000"
 
                             android:textSize="16sp" />
@@ -184,15 +188,80 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_marginTop="16dp"
-                            android:text="Url Link"
                             android:layout_weight="1"
+                            android:text="Url Link"
                             android:textColor="#000000"
                             android:textSize="16sp" />
                     </LinearLayout>
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Please insert more details of harasser if any :"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/textviewMoredetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/border"
+                        android:hint="  Write here.."
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="How certain are you about the harasser ?"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonverycertain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Very Certain"
+
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonuncertain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Uncertain"
+                            android:textSize="16sp" />
 
 
-
+                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
