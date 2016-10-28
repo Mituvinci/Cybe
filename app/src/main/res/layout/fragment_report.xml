@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EFEDF0"
     android:fitsSystemWindows="true"
-    tools:context="app.wistem.com.cybe.ReportFragment">
+    tools:context="app.wistem.com.cybe.fragments.ReportFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -255,8 +255,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/bordercolor"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -301,6 +301,67 @@
 
                     </LinearLayout>
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bordercolor"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Would you like to make your report public ?"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonpublic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes"
+
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonunnonpublic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:background="@color/buttonback"
+                    android:id="@+id/buttonsubmit"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:text="SUBMIT"/>
 
             </LinearLayout>
 

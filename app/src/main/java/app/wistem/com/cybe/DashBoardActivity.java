@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import app.wistem.com.cybe.fragments.ReportFragment;
+
 public class DashBoardActivity extends AppCompatActivity {
     private TextView mTextViewReport;
     @Override
