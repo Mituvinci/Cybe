@@ -19,7 +19,7 @@ import app.wistem.com.cybe.R;
 /**
  * Created by mitu on 7/17/16.
  */
-public class KnowingSourceAdapter extends RecyclerView.Adapter<KnowingSourceAdapter.DataObjectHolder> {
+public class ScareScoreAdapter extends RecyclerView.Adapter<ScareScoreAdapter.DataObjectHolder> {
 
     private List<String> mDataset;
     private Context mContext;
@@ -58,7 +58,7 @@ public class KnowingSourceAdapter extends RecyclerView.Adapter<KnowingSourceAdap
 
     }
 
-    public KnowingSourceAdapter(List<String> dataSet, Context applicationContext, String knowingsource11) {
+    public ScareScoreAdapter(List<String> dataSet, Context applicationContext, String knowingsource11) {
         mDataset = dataSet;
         mContext = applicationContext;
         knowingSourceForSet = knowingsource11;
@@ -70,7 +70,7 @@ public class KnowingSourceAdapter extends RecyclerView.Adapter<KnowingSourceAdap
     @Override
     public DataObjectHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.custom_layout_update_userinformation, parent, false);
+                .inflate(R.layout.custom_layout_scare_score, parent, false);
 
         DataObjectHolder dataObjectHolder = new DataObjectHolder(view);
         return dataObjectHolder;

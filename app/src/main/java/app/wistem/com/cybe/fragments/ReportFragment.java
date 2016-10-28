@@ -17,7 +17,7 @@ import android.widget.TextView;
 import java.util.Arrays;
 
 import app.wistem.com.cybe.R;
-import app.wistem.com.cybe.adapters.KnowingSourceAdapter;
+import app.wistem.com.cybe.adapters.ScareScoreAdapter;
 
 
 /**
@@ -54,7 +54,7 @@ public class ReportFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 LayoutInflater li = LayoutInflater.from(getActivity());
-                View promptsView = li.inflate(R.layout.choose_dialog_district_layout, null);
+                View promptsView = li.inflate(R.layout.choose_dialog_scare_score_layout, null);
                 TextView textView;
                 textView = (TextView) promptsView.findViewById(R.id.titleactivity);
                 textView.setText("Score how much scared you are");
@@ -63,12 +63,12 @@ public class ReportFragment extends Fragment {
                 alertDialogBuilder.setView(promptsView);
                 final RecyclerView mRecyclerViewchooseDialog;
                 final RecyclerView.LayoutManager mLayoutManagerChoosDialog;
-                KnowingSourceAdapter mAdapterChoosDialog;
+                ScareScoreAdapter mAdapterChoosDialog;
                 mRecyclerViewchooseDialog = (RecyclerView) promptsView.findViewById(R.id.districtchoose);
                 mLayoutManagerChoosDialog = new LinearLayoutManager(getActivity());
                 mRecyclerViewchooseDialog.setHasFixedSize(true);
                 mRecyclerViewchooseDialog.setLayoutManager(mLayoutManagerChoosDialog);
-                mAdapterChoosDialog = new KnowingSourceAdapter(Arrays.asList(mKnowingsource),getActivity(),"1");
+                mAdapterChoosDialog = new ScareScoreAdapter(Arrays.asList(mKnowingsource),getActivity(),"1");
                 mRecyclerViewchooseDialog.setAdapter(mAdapterChoosDialog);
                 mRecyclerViewchooseDialog.setNestedScrollingEnabled(false);
 
