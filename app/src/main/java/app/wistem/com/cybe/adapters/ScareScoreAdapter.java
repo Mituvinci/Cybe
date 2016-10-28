@@ -25,7 +25,7 @@ public class ScareScoreAdapter extends RecyclerView.Adapter<ScareScoreAdapter.Da
     private Context mContext;
 
     private final static String KNWOING_SOURCE = "knowingSource";
-    private final static String KNOWING_POSITION = "knowingposition";
+    private final static String KNOWING_POSITION = "mScareScorePosition";
 
     public ArrayList<Integer> selectedIds = new ArrayList<Integer>();
     private String knowingSource = "";

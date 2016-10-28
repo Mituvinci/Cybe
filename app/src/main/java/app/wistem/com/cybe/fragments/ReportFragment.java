@@ -2,6 +2,9 @@ package app.wistem.com.cybe.fragments;
 
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,6 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -20,8 +24,8 @@ import android.widget.TextView;
 import java.util.Arrays;
 
 import app.wistem.com.cybe.R;
-import app.wistem.com.cybe.utilities.SessionManager;
 import app.wistem.com.cybe.adapters.ScareScoreAdapter;
+import app.wistem.com.cybe.utilities.StoreReportSharedPreferenc;
 
 
 /**
@@ -31,7 +35,7 @@ public class ReportFragment extends Fragment {
 
     private static String[] mScore = {"1","2","3","4","5","6","7","8","9","10"};
     private final static String KNOWING_POSITION = "mScareScorePosition";
-    private String mScareScorePosition;
+    private static String mScareScorePosition;
     private Button mButtonSubmit;
 
     private RadioButton mRadioButtonMe;
@@ -40,13 +44,18 @@ public class ReportFragment extends Fragment {
     private RadioButton mRadioButtonUncertain;
     private RadioButton mRadioButtonYes;
     private RadioButton mRadioButtonNo;
-    private TextView mTextViewScareScore;
 
     private EditText mEditTextSummarize;
     private EditText mEditTextMoreDetails;
 
+    private static String mScarePerson;
+    private static String mCertainty;
+    private static String mPublicNot;
+    private static String mScoreNumber;
+    private static String mSummarize ="";
+    private static String mMoreDetails = "";
 
-    private SessionManager mSessionManager;
+    private StoreReportSharedPreferenc mSessionManager;
 
 
     private TextView mTextViewScore;
@@ -60,7 +69,7 @@ public class ReportFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View  view = inflater.inflate(R.layout.fragment_report, container, false);
-        mSessionManager = new SessionManager(getActivity());
+        mSessionManager = new StoreReportSharedPreferenc(getActivity());
         mTextViewScore = (TextView) view.findViewById(R.id.textViewScoreit);
         mButtonSubmit = (Button) view.findViewById(R.id.buttonsubmit);
 
@@ -73,23 +82,96 @@ public class ReportFragment extends Fragment {
 
         mEditTextSummarize = (EditText) view.findViewById(R.id.editTextSummarize);
         mEditTextMoreDetails = (EditText) view.findViewById(R.id.edittextMoredetails);
-
-
         scareScore();
-        submitbutton();
+        submitReport();
 
+        mRadioButtonMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mRadioButtonSomeOneElse.setChecked(false);
+                mRadioButtonMe.setChecked(true);
+                mScarePerson = "ME";
+            }
+        });
+
+
+        mRadioButtonSomeOneElse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mRadioButtonSomeOneElse.setChecked(true);
+                mRadioButtonMe.setChecked(false);
+                mScarePerson = "Some one I know";
+
+            }
+        });
+
+
+        mRadioButtonVerCertain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mRadioButtonVerCertain.setChecked(true);
+                mRadioButtonUncertain.setChecked(false);
+                mCertainty = "Very Certain";
+            }
+        });
+
+        mRadioButtonUncertain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mRadioButtonVerCertain.setChecked(false);
+                mRadioButtonUncertain.setChecked(true);
+                mCertainty = " Uncertain";
+
+            }
+        });
+        mRadioButtonYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mRadioButtonYes.setChecked(true);
+                mRadioButtonNo.setChecked(false);
+                mPublicNot = "YES";
+            }
+        });
+        mRadioButtonNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mRadioButtonYes.setChecked(false);
+                mRadioButtonNo.setChecked(true);
+                mPublicNot = "No";
+            }
+        });
 
 
         return  view;
     }
 
-    private  void submitbutton(){
+    private void radioButtonValue(){
+
+
+    }
+    private  void submitReport(){
 
         mButtonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    getFragmentManager().beginTransaction().addToBackStack(null)
-                            .replace(R.id.main, new ReportFeedBackFragment()).commit();
+
+                mSummarize = mEditTextSummarize.getText().toString();
+                mMoreDetails = mEditTextMoreDetails.getText().toString();
+
+                    View view = getActivity().getCurrentFocus();
+                    if (view != null) {
+                        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                    }
+                    mSessionManager.storeUserInformation(mScarePerson,mScoreNumber,mSummarize,mMoreDetails,mCertainty,mPublicNot);
+                   ;FragmentManager fm = getActivity().getFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.main, new ReportFeedBackFragment());
+                    ft.addToBackStack(null);
+                    fm.popBackStackImmediate();
+                    ft.commit();
+
+
 
             }
         });
@@ -129,6 +211,7 @@ public class ReportFragment extends Fragment {
                                         prefschck.edit().clear().apply();
                                         if(knowingrposition != -1) {
                                             mScareScorePosition = mScore[knowingrposition];
+                                            mScoreNumber = mScareScorePosition;
                                             mTextViewScore.setText(mScareScorePosition +" out of 10");
 
                                         }else {

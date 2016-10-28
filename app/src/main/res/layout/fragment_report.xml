@@ -85,6 +85,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:checked="false"
                             android:text="me"
 
                             android:textSize="16sp" />
@@ -95,6 +96,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="someone i know"
+                            android:checked="false"
                             android:textSize="16sp" />
 
 
@@ -294,6 +296,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Very Certain"
+                            android:checked="false"
+
 
                             android:textSize="16sp" />
 
@@ -303,6 +307,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Uncertain"
+                            android:checked="false"
+
                             android:textSize="16sp" />
 
 
@@ -345,6 +351,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Yes"
+                            android:checked="false"
 
                             android:textSize="16sp" />
 
@@ -354,6 +361,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="No"
+                            android:checked="false"
+
                             android:textSize="16sp" />
 
 

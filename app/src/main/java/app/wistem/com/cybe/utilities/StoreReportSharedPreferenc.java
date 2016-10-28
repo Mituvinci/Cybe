@@ -34,13 +34,12 @@ public class StoreReportSharedPreferenc {
         mEditor = mPref.edit();
     }
 
-    public void storeUserInformation(String email, String name, String mobile, String gender, String address, String districtbangla,
+    public void storeUserInformation(String email, String name, String mobile, String address, String districtbangla,
                                      String districtenglish){
 
         mEditor.putString(HARASSED,email);
         mEditor.putString(SCARE_SCORE,name);
         mEditor.putString(SUMMERIZE,mobile);
-        mEditor.putString(GENDER,gender);
         mEditor.putString(MORE_DETAILS,address);
         mEditor.putString(HARASSER_CERTAINTY,districtbangla);
         mEditor.putString(PUBLIC,districtenglish);
