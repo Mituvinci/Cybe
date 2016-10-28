@@ -93,6 +93,15 @@
 
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bordercolor"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
+
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -118,6 +127,12 @@
                         android:textColor="#000000"
                         android:textSize="16sp" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bordercolor"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -143,6 +158,13 @@
                         android:textSize="16sp" />
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bordercolor"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -159,13 +181,13 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="3">
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
                             android:text="Audio"
@@ -175,7 +197,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
                             android:text="Video"
@@ -186,7 +208,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="32dp"
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
                             android:text="Url Link"
@@ -194,7 +216,15 @@
                             android:textSize="16sp" />
                     </LinearLayout>
 
+
+
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bordercolor"
+                    android:layout_marginBottom="16dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -219,6 +249,13 @@
                         android:hint="  Write here.."
                         android:textSize="16sp" />
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bordercolor"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
