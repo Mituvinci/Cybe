@@ -114,6 +114,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         //Log.d("google3",checkinsignin+"");
         callbackManager.onActivityResult(requestCode, resultCode, data);
-        startActivity( new Intent(LoginActivity.this, DashBoardActivity.class));
+        //startActivity( new Intent(LoginActivity.this, DashBoardActivity.class));
     }
 }
