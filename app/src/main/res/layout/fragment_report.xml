@@ -168,7 +168,7 @@
                             android:layout_height="40dp"
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
-                            android:text="Audio Record"
+                            android:text="Audio"
                             android:layout_marginLeft="3dp"
                             android:textColor="#000000"
                             android:textSize="16sp" />
@@ -178,7 +178,7 @@
                             android:layout_height="40dp"
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
-                            android:text="Video Record"
+                            android:text="Video"
                             android:layout_marginLeft="3dp"
                             android:textColor="#000000"
 
