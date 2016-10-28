@@ -1,5 +1,7 @@
 package app.wistem.com.cybe;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -39,6 +41,8 @@ public class DashBoardActivity extends AppCompatActivity {
         report();
         newsfeed();
         emergencyCallList();
+        enterForum();
+        visitFaceBookPage();
         mTextViewEnterOurForum.setText("Enter Our Forum");
         mTextViewVisitFaceBookpage.setText("Visit facebook page");
         mTextViewNotificationSetting.setText("Notification and Settings");
@@ -69,6 +73,35 @@ public class DashBoardActivity extends AppCompatActivity {
 
         }
 
+    private void enterForum(){
+
+        mTextViewEnterOurForum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("http://wistembangladesh.org/#primary"));
+                startActivity(intent);
+            }
+        });
+
+    }
+
+
+    private void  visitFaceBookPage(){
+        mTextViewVisitFaceBookpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse("https://www.facebook.com/groups/1072957612794138/"));
+                startActivity(intent);
+            }
+        });
+
+    }
 
 
     private void  newsfeed(){
