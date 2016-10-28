@@ -29,8 +29,8 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="this  is a button"
-                android:background="#0099CC"
+                android:text="Click to send Report"
+                android:background="@color/buttonback"
                 android:textSize="18sp"
                  />
 
