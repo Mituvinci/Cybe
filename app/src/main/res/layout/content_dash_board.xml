@@ -23,16 +23,85 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/dealdetails_issoldoutordealclosed_button"
+                android:id="@+id/textViewreport"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Click to send Report"
+                android:text="Report For Harassing"
                 android:background="@color/buttonback"
-                android:textSize="18sp"
+                android:textSize="16sp"
                  />
+
+            <TextView
+                android:id="@+id/textViewnewsFeed"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Check news Feed"
+                android:background="@color/buttonback"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/textViewnewsEmergencyCallList"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Emergency Call List"
+                android:background="@color/buttonback"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/textViewnewsEnterForum"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Enter Our Forum"
+                android:background="@color/buttonback"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/textViewVisitFaceBook"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Visit facebook page"
+                android:background="@color/buttonback"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/textViewnotificationSetting"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Notification and Settings"
+                android:background="@color/buttonback"
+                android:textSize="16sp"
+                />
+
+
+
 
         </LinearLayout>
     </ScrollView>
