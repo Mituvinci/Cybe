@@ -20,15 +20,33 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:text="You must Login to Report or Check Our News Feed"
+        android:textColor="#455A64"
+        android:text="You must be Logged in to Report or Check Our News Feeds"
         android:textSize="18sp"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginTop="200dp"
+        android:orientation="vertical"
         android:gravity="bottom">
+
+        <Button
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:id="@+id/sign_in_button"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="2dp"
+            android:text="Google লগইন"
+
+
+            android:drawablePadding="-19dp"
+            android:drawableLeft="@drawable/googlplus"
+            android:background="@drawable/google_back"
+            />
 
         <FrameLayout
             android:id="@+id/FrameLayout1"
@@ -49,7 +67,7 @@
 
     <Button
         android:id="@+id/facebookBtn"
-        android:layout_width="match_parent"
+        android:layout_width="240dp"
         android:layout_height="40dp"
         android:layout_alignLeft="@+id/FrameLayout1"
         android:layout_alignParentBottom="true"
@@ -60,5 +78,6 @@
         android:drawablePadding="-23dp"
         android:onClick="onClick"
         android:text="Login with facebook"
+        android:layout_gravity="center"
         android:textColor="#ffffff" />
 </LinearLayout>

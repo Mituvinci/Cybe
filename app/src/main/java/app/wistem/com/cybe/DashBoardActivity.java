@@ -16,6 +16,10 @@ public class DashBoardActivity extends AppCompatActivity {
     private TextView mTextViewReport;
     private TextView mTextViewNewsFeed;
     private TextView mTextViewEmergencyCallList;
+    private TextView mTextViewEnterOurForum;
+    private TextView mTextViewVisitFaceBookpage;
+    private TextView mTextViewNotificationSetting;
+    private SessionManager mSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +29,19 @@ public class DashBoardActivity extends AppCompatActivity {
         mTextViewReport = (TextView) findViewById(R.id.textViewreport);
         mTextViewNewsFeed = (TextView) findViewById(R.id.textViewnewsFeed);
         mTextViewEmergencyCallList = (TextView) findViewById(R.id.textViewnewsEmergencyCallList);
+        mTextViewEnterOurForum = (TextView) findViewById(R.id.textViewnewsEnterForum);
+        mTextViewVisitFaceBookpage = (TextView) findViewById(R.id.textViewVisitFaceBook);
+        mTextViewNotificationSetting = (TextView) findViewById(R.id.textViewnotificationSetting);
+
+
+
+        mSessionManager = new SessionManager(getBaseContext());
         report();
         newsfeed();
         emergencyCallList();
+        mTextViewEnterOurForum.setText("Enter Our Forum");
+        mTextViewVisitFaceBookpage.setText("Visit facebook page");
+        mTextViewNotificationSetting.setText("Notification and Settings");
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -42,17 +56,23 @@ public class DashBoardActivity extends AppCompatActivity {
 
 
     private void report(){
-        mTextViewReport.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getFragmentManager().beginTransaction().addToBackStack(null)
-                        .replace(R.id.main, new ReportFragment()).commit();
-            }
-        });
+            mTextViewReport.setText("Report For Harassing");
+            mTextViewReport.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getFragmentManager().beginTransaction().addToBackStack(null)
+                            .replace(R.id.main, new ReportFragment()).commit();
 
-    }
+                }
+            });
+
+
+        }
+
+
 
     private void  newsfeed(){
+        mTextViewNewsFeed.setText("Check news Feed");
 
         mTextViewNewsFeed.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +84,7 @@ public class DashBoardActivity extends AppCompatActivity {
     }
 
     private void emergencyCallList(){
+        mTextViewEmergencyCallList.setText("Emergency Call List");
 
         mTextViewEmergencyCallList.setOnClickListener(new View.OnClickListener() {
             @Override

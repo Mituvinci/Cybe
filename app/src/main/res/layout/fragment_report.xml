@@ -59,48 +59,55 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Have you or some you know been harassed ?"
-                    android:textSize="16sp" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="32dp"
-                    android:layout_marginTop="16dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:orientation="vertical"
+                    android:elevation="30dp"
+                    android:layout_height="wrap_content">
 
-                    <RadioButton
-                        android:id="@+id/radioButtonMe"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="me"
-
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Have you or some you know been harassed ?"
                         android:textSize="16sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButtonSomeoneIknow"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="someone i know"
-                        android:textSize="16sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
 
+                        <RadioButton
+                            android:id="@+id/radioButtonMe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="me"
+
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonSomeoneIknow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="someone i know"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/bordercolor"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"/>
-
+                    android:background="@color/bordercolor" />
 
 
                 <LinearLayout
@@ -128,12 +135,13 @@
                         android:textColor="#000000"
                         android:textSize="16sp" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/bordercolor"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="16dp"/>
+                    android:background="@color/bordercolor" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -162,9 +170,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/bordercolor"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="16dp"/>
+                    android:background="@color/bordercolor" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -189,20 +197,20 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
+                            android:layout_marginLeft="3dp"
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
                             android:text="Audio"
-                            android:layout_marginLeft="3dp"
                             android:textColor="#000000"
                             android:textSize="16sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
+                            android:layout_marginLeft="3dp"
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
                             android:text="Video"
-                            android:layout_marginLeft="3dp"
                             android:textColor="#000000"
 
                             android:textSize="16sp" />
@@ -218,14 +226,13 @@
                     </LinearLayout>
 
 
-
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/bordercolor"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/bordercolor" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -254,9 +261,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/bordercolor"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="16dp"/>
+                    android:background="@color/bordercolor" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -305,9 +312,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/bordercolor"
+                    android:layout_marginBottom="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginBottom="16dp"/>
+                    android:background="@color/bordercolor" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -354,14 +361,14 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/buttonsubmit"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_margin="@dimen/activity_vertical_margin"
                     android:background="@color/buttonback"
-                    android:id="@+id/buttonsubmit"
+                    android:text="SUBMIT"
                     android:textColor="#ffffff"
-                    android:textSize="16sp"
-                    android:text="SUBMIT"/>
+                    android:textSize="16sp" />
 
             </LinearLayout>
 

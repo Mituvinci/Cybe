@@ -3,6 +3,7 @@ package app.wistem.com.cybe.fragments;
 
 import android.app.Fragment;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -12,11 +13,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Arrays;
 
+import app.wistem.com.cybe.LoginActivity;
 import app.wistem.com.cybe.R;
+import app.wistem.com.cybe.SessionManager;
 import app.wistem.com.cybe.adapters.ScareScoreAdapter;
 
 
@@ -28,6 +32,8 @@ public class ReportFragment extends Fragment {
     private static String[] mKnowingsource = {"1","2","3","4","5","6","7","8","9","10"};
     private final static String KNOWING_POSITION = "knowingposition";
     private String mUserknowingSource;
+    private Button mbuttonSubmit;
+    private SessionManager mSessionManager;
 
 
     private TextView mTextViewScore;
@@ -41,14 +47,32 @@ public class ReportFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View  view = inflater.inflate(R.layout.fragment_report, container, false);
-
+        mSessionManager = new SessionManager(getActivity());
         mTextViewScore = (TextView) view.findViewById(R.id.textViewScoreit);
+        mbuttonSubmit = (Button) view.findViewById(R.id.buttonsubmit);
         scareScore();
+        submitbutton();
+
 
 
         return  view;
     }
 
+    private  void submitbutton(){
+
+        mbuttonSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mSessionManager.isLoggedIn()) {
+                    getFragmentManager().beginTransaction().addToBackStack(null)
+                            .replace(R.id.main, new ReportFragment()).commit();}
+                else {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+
+                }
+            }
+        });
+    }
     private  void  scareScore(){
         mTextViewScore.setOnClickListener(new View.OnClickListener() {
             @Override

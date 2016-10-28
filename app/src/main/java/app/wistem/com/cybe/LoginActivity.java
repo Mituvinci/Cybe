@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button facebookBtn;
     private LoginButton facebookLoginButton;
     private CallbackManager callbackManager;
+    private SessionManager mSessionManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +39,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         AppEventsLogger.activateApp(this);
 
         setContentView(R.layout.activity_login);
+        mSessionManager = new SessionManager(getBaseContext());
         facebookLoginButton = (LoginButton) findViewById(R.id.login_button);
         facebookBtn = (Button) findViewById(R.id.facebookBtn);
 
+        mSessionManager.createLoginSession();
         callbackManager = CallbackManager.Factory.create();
 
         facebookLoginButton.setReadPermissions(Arrays.asList("email"));
@@ -62,7 +65,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                                     final String nameFacebook = object.getString("name");
                                     //info.setText(emailFacebook);
-
+                                    mSessionManager.createLoginSession();
+                                    setResult(RESULT_OK);
+                                    finish();
 
 
                                 } catch (JSONException ex) {
@@ -78,13 +83,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onCancel() {
-                Toast.makeText(getBaseContext(), R.string.problem_inlogin_with_facebook, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"problem occurred login with facebook ", Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void onError(FacebookException error) {
-                Toast.makeText(getBaseContext(), R.string.problem_inlogin_with_facebook, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"problem occurred login with facebook", Toast.LENGTH_SHORT).show();
             }
         });
 

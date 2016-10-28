@@ -31,7 +31,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:text="Report For Harassing"
-                android:background="@color/buttonback"
+                android:background="@drawable/button_radius"
                 android:textSize="16sp"
                  />
 
@@ -45,7 +45,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:text="Check news Feed"
-                android:background="@color/buttonback"
+                android:background="@drawable/button_radius"
                 android:textSize="16sp"
                 />
 
@@ -58,7 +58,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Emergency Call List"
-                android:background="@color/buttonback"
+                android:background="@drawable/button_radius"
                 android:textSize="16sp"
                 />
 
@@ -71,7 +71,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Enter Our Forum"
-                android:background="@color/buttonback"
+                android:background="@drawable/button_radius"
                 android:textSize="16sp"
                 />
 
@@ -84,7 +84,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Visit facebook page"
-                android:background="@color/buttonback"
+                android:background="@drawable/button_radius"
                 android:textSize="16sp"
                 />
 
@@ -97,7 +97,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Notification and Settings"
-                android:background="@color/buttonback"
+                android:background="@drawable/button_radius"
                 android:textSize="16sp"
                 />
 
