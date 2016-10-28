@@ -13,12 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.util.Arrays;
 
 import app.wistem.com.cybe.R;
-import app.wistem.com.cybe.SessionManager;
+import app.wistem.com.cybe.utilities.SessionManager;
 import app.wistem.com.cybe.adapters.ScareScoreAdapter;
 
 
@@ -27,10 +29,23 @@ import app.wistem.com.cybe.adapters.ScareScoreAdapter;
  */
 public class ReportFragment extends Fragment {
 
-    private static String[] mKnowingsource = {"1","2","3","4","5","6","7","8","9","10"};
-    private final static String KNOWING_POSITION = "knowingposition";
-    private String mUserknowingSource;
-    private Button mbuttonSubmit;
+    private static String[] mScore = {"1","2","3","4","5","6","7","8","9","10"};
+    private final static String KNOWING_POSITION = "mScareScorePosition";
+    private String mScareScorePosition;
+    private Button mButtonSubmit;
+
+    private RadioButton mRadioButtonMe;
+    private RadioButton mRadioButtonSomeOneElse;
+    private RadioButton mRadioButtonVerCertain;
+    private RadioButton mRadioButtonUncertain;
+    private RadioButton mRadioButtonYes;
+    private RadioButton mRadioButtonNo;
+    private TextView mTextViewScareScore;
+
+    private EditText mEditTextSummarize;
+    private EditText mEditTextMoreDetails;
+
+
     private SessionManager mSessionManager;
 
 
@@ -47,7 +62,19 @@ public class ReportFragment extends Fragment {
         View  view = inflater.inflate(R.layout.fragment_report, container, false);
         mSessionManager = new SessionManager(getActivity());
         mTextViewScore = (TextView) view.findViewById(R.id.textViewScoreit);
-        mbuttonSubmit = (Button) view.findViewById(R.id.buttonsubmit);
+        mButtonSubmit = (Button) view.findViewById(R.id.buttonsubmit);
+
+        mRadioButtonMe = (RadioButton) view.findViewById(R.id.radioButtonMe);
+        mRadioButtonSomeOneElse = (RadioButton) view.findViewById(R.id.radioButtonSomeoneIknow);;
+        mRadioButtonVerCertain = (RadioButton) view.findViewById(R.id.radioButtonverycertain);;
+        mRadioButtonUncertain = (RadioButton) view.findViewById(R.id.radioButtonuncertain);;
+        mRadioButtonYes = (RadioButton) view.findViewById(R.id.radioButtonpublic);;
+        mRadioButtonNo = (RadioButton) view.findViewById(R.id.radioButtonunnonpublic);;
+
+        mEditTextSummarize = (EditText) view.findViewById(R.id.editTextSummarize);
+        mEditTextMoreDetails = (EditText) view.findViewById(R.id.edittextMoredetails);
+
+
         scareScore();
         submitbutton();
 
@@ -58,11 +85,11 @@ public class ReportFragment extends Fragment {
 
     private  void submitbutton(){
 
-        mbuttonSubmit.setOnClickListener(new View.OnClickListener() {
+        mButtonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                     getFragmentManager().beginTransaction().addToBackStack(null)
-                            .replace(R.id.main, new ReportFragment()).commit();
+                            .replace(R.id.main, new ReportFeedBackFragment()).commit();
 
             }
         });
@@ -86,7 +113,7 @@ public class ReportFragment extends Fragment {
                 mLayoutManagerChoosDialog = new LinearLayoutManager(getActivity());
                 mRecyclerViewchooseDialog.setHasFixedSize(true);
                 mRecyclerViewchooseDialog.setLayoutManager(mLayoutManagerChoosDialog);
-                mAdapterChoosDialog = new ScareScoreAdapter(Arrays.asList(mKnowingsource),getActivity(),"1");
+                mAdapterChoosDialog = new ScareScoreAdapter(Arrays.asList(mScore),getActivity(),"1");
                 mRecyclerViewchooseDialog.setAdapter(mAdapterChoosDialog);
                 mRecyclerViewchooseDialog.setNestedScrollingEnabled(false);
 
@@ -101,8 +128,8 @@ public class ReportFragment extends Fragment {
                                         int knowingrposition = prefschck.getInt(KNOWING_POSITION,-1);
                                         prefschck.edit().clear().apply();
                                         if(knowingrposition != -1) {
-                                            mUserknowingSource = mKnowingsource[knowingrposition];
-                                            mTextViewScore.setText(mUserknowingSource+" out of 10");
+                                            mScareScorePosition = mScore[knowingrposition];
+                                            mTextViewScore.setText(mScareScorePosition +" out of 10");
 
                                         }else {
                                         }

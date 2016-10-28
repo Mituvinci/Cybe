@@ -1,4 +1,4 @@
-package app.wistem.com.cybe;
+package app.wistem.com.cybe.utilities;
 
 import android.content.Context;
 import android.content.SharedPreferences;

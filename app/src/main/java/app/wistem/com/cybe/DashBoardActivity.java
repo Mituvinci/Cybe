@@ -13,6 +13,7 @@ import android.widget.TextView;
 import app.wistem.com.cybe.fragments.EmergencyCallListFragment;
 import app.wistem.com.cybe.fragments.NewsFeedFragment;
 import app.wistem.com.cybe.fragments.ReportFragment;
+import app.wistem.com.cybe.utilities.SessionManager;
 
 public class DashBoardActivity extends AppCompatActivity {
     private TextView mTextViewReport;
