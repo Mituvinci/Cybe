@@ -6,14 +6,17 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class DashBoardActivity extends AppCompatActivity {
-
+    private TextView mTextViewReport;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mTextViewReport = (TextView) findViewById(R.id.textViewreport);
+       report();
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -26,4 +29,15 @@ public class DashBoardActivity extends AppCompatActivity {
         });
     }
 
+
+    private void report(){
+        mTextViewReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().addToBackStack(null)
+                        .replace(R.id.main, new ReportFragment()).commit();
+            }
+        });
+
+    }
 }
