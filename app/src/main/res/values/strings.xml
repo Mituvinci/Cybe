@@ -5,7 +5,7 @@
     <string name="problem_inlogin_with_facebook">আপনার ফেসবুক লগইনে সমস্যা হচ্ছে, অন্য অপশন চেষ্টা করুন </string>
     <string name="title_activity_dash_board">DashBoardActivity</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_news_feed">Land rights offer a key way to economically empower women, giving them the confidence they need to tackle gender inequalities.</string>
 
 </resources>

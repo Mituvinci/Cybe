@@ -61,14 +61,22 @@ public class DashBoardActivity extends AppCompatActivity {
 
     private void report(){
             mTextViewReport.setText("Report For Harassing");
-            mTextViewReport.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    getFragmentManager().beginTransaction().addToBackStack(null)
-                            .replace(R.id.main, new ReportFragment()).commit();
 
-                }
-            });
+                mTextViewReport.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (mSessionManager.isLoggedIn()) {
+                            getFragmentManager().beginTransaction().addToBackStack(null)
+                                    .replace(R.id.main, new ReportFragment()).commit();
+                        }else {
+                            startActivity(new Intent(DashBoardActivity.this, LoginActivity.class));
+
+                        }
+
+                    }
+                });
+
+
 
 
         }

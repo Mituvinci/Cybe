@@ -3,7 +3,6 @@ package app.wistem.com.cybe.fragments;
 
 import android.app.Fragment;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -18,7 +17,6 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 
-import app.wistem.com.cybe.LoginActivity;
 import app.wistem.com.cybe.R;
 import app.wistem.com.cybe.SessionManager;
 import app.wistem.com.cybe.adapters.ScareScoreAdapter;
@@ -63,13 +61,9 @@ public class ReportFragment extends Fragment {
         mbuttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mSessionManager.isLoggedIn()) {
                     getFragmentManager().beginTransaction().addToBackStack(null)
-                            .replace(R.id.main, new ReportFragment()).commit();}
-                else {
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                            .replace(R.id.main, new ReportFragment()).commit();
 
-                }
             }
         });
     }

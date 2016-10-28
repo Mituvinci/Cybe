@@ -23,8 +23,8 @@ public class EmergencyCallListFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private RecyclerViewAdapterFirstWay mAdapter;
-    private String[] items = {"75348",
-    "423948","324923","3248293","237489"};
+    private String[] items = {"375348",
+    "423948","324923","248293","237489"};
     public EmergencyCallListFragment() {
         // Required empty public constructor
     }
