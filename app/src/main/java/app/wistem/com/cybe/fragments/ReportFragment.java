@@ -2,12 +2,22 @@ package app.wistem.com.cybe.fragments;
 
 
 import android.app.Fragment;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.Arrays;
 
 import app.wistem.com.cybe.R;
+import app.wistem.com.cybe.adapters.KnowingSourceAdapter;
 
 
 /**
@@ -15,7 +25,12 @@ import app.wistem.com.cybe.R;
  */
 public class ReportFragment extends Fragment {
 
+    private static String[] mKnowingsource = {"1","2","3","4","5","6","7","8","9","10"};
+    private final static String KNOWING_POSITION = "knowingposition";
+    private String mUserknowingSource;
 
+
+    private TextView mTextViewScore;
     public ReportFragment() {
         // Required empty public constructor
     }
@@ -25,7 +40,70 @@ public class ReportFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_report, container, false);
+        View  view = inflater.inflate(R.layout.fragment_report, container, false);
+
+        mTextViewScore = (TextView) view.findViewById(R.id.textViewScoreit);
+        scareScore();
+
+
+        return  view;
     }
 
+    private  void  scareScore(){
+        mTextViewScore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LayoutInflater li = LayoutInflater.from(getActivity());
+                View promptsView = li.inflate(R.layout.choose_dialog_district_layout, null);
+                TextView textView;
+                textView = (TextView) promptsView.findViewById(R.id.titleactivity);
+                textView.setText("Score how much scared you are");
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        getActivity());
+                alertDialogBuilder.setView(promptsView);
+                final RecyclerView mRecyclerViewchooseDialog;
+                final RecyclerView.LayoutManager mLayoutManagerChoosDialog;
+                KnowingSourceAdapter mAdapterChoosDialog;
+                mRecyclerViewchooseDialog = (RecyclerView) promptsView.findViewById(R.id.districtchoose);
+                mLayoutManagerChoosDialog = new LinearLayoutManager(getActivity());
+                mRecyclerViewchooseDialog.setHasFixedSize(true);
+                mRecyclerViewchooseDialog.setLayoutManager(mLayoutManagerChoosDialog);
+                mAdapterChoosDialog = new KnowingSourceAdapter(Arrays.asList(mKnowingsource),getActivity(),"1");
+                mRecyclerViewchooseDialog.setAdapter(mAdapterChoosDialog);
+                mRecyclerViewchooseDialog.setNestedScrollingEnabled(false);
+
+                // set dialog message
+                alertDialogBuilder
+                        .setCancelable(false)
+                        .setPositiveButton("Save",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // get user input and set it to result
+                                        SharedPreferences prefschck = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                                        int knowingrposition = prefschck.getInt(KNOWING_POSITION,-1);
+                                        prefschck.edit().clear().apply();
+                                        if(knowingrposition != -1) {
+                                            mUserknowingSource = mKnowingsource[knowingrposition];
+                                            mTextViewScore.setText(mUserknowingSource+" out of 10");
+
+                                        }else {
+                                        }
+
+                                    }
+                                })
+                        .setNegativeButton("Cance",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+
+                // show it
+                alertDialog.show();
+            }
+        });
+    }
 }

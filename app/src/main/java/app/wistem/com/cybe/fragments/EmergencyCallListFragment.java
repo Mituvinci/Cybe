@@ -12,10 +12,10 @@ import app.wistem.com.cybe.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NewsFeedFragment extends Fragment {
+public class EmergencyCallListFragment extends Fragment {
 
 
-    public NewsFeedFragment() {
+    public EmergencyCallListFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class NewsFeedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_news_feed, container, false);
+        return inflater.inflate(R.layout.fragment_emergency_call_list, container, false);
     }
 
 }

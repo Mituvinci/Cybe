@@ -8,18 +8,27 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import app.wistem.com.cybe.fragments.EmergencyCallListFragment;
+import app.wistem.com.cybe.fragments.NewsFeedFragment;
 import app.wistem.com.cybe.fragments.ReportFragment;
 
 public class DashBoardActivity extends AppCompatActivity {
     private TextView mTextViewReport;
+    private TextView mTextViewNewsFeed;
+    private TextView mTextViewEmergencyCallList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        mTextViewReport = (TextView) findViewById(R.id.textViewreport);
-       report();
         setSupportActionBar(toolbar);
+        mTextViewReport = (TextView) findViewById(R.id.textViewreport);
+        mTextViewNewsFeed = (TextView) findViewById(R.id.textViewnewsFeed);
+        mTextViewEmergencyCallList = (TextView) findViewById(R.id.textViewnewsEmergencyCallList);
+        report();
+        newsfeed();
+        emergencyCallList();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -41,5 +50,27 @@ public class DashBoardActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void  newsfeed(){
+
+        mTextViewNewsFeed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().addToBackStack(null)
+                        .replace(R.id.main, new NewsFeedFragment()).commit();
+            }
+        });
+    }
+
+    private void emergencyCallList(){
+
+        mTextViewEmergencyCallList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().addToBackStack(null)
+                        .replace(R.id.main, new EmergencyCallListFragment()).commit();
+            }
+        });
     }
 }
