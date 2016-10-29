@@ -61,7 +61,7 @@ public class DashBoardActivity extends AppCompatActivity {
 
 
     private void report(){
-            mTextViewReport.setText("Report For Harassing");
+            mTextViewReport.setText("Report Cyber Harassment");
 
                 mTextViewReport.setOnClickListener(new View.OnClickListener() {
                     @Override

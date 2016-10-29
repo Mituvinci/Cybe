@@ -26,89 +26,118 @@
             <TextView
                 android:id="@+id/textViewreport"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_height="50dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Report For Harassing"
+                android:text="Report Cyber Harassment"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
+                android:background="@color/backgroun_assh_color"
                 android:textStyle="bold"
-                android:background="@drawable/button_radius"
                 android:textSize="16sp"
 
                  />
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bordercolor" />
             <TextView
                 android:id="@+id/textViewnewsFeed"
                 android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Check news Feed"
-                android:background="@drawable/button_radius"
+                android:background="@color/backgroun_assh_color"
                 android:textSize="16sp"
                 />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bordercolor" />
 
             <TextView
                 android:id="@+id/textViewnewsEmergencyCallList"
                 android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Colored"
+
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="8dp"
                 android:text="Emergency Call List"
-                android:background="@drawable/button_radius"
+                android:background="@color/backgroun_assh_color"
                 android:textSize="16sp"
                 />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bordercolor" />
 
             <TextView
                 android:id="@+id/textViewnewsEnterForum"
                 android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Colored"
+
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Enter Our Forum"
-                android:background="@drawable/button_radius"
+                android:background="@color/backgroun_assh_color"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bordercolor" />
+            <TextView
+                android:id="@+id/textViewVisitFaceBook"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Visit facebook page"
+                android:background="@color/backgroun_assh_color"
                 android:textSize="16sp"
                 />
 
             <TextView
-                android:id="@+id/textViewVisitFaceBook"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textStyle="bold"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="16dp"
-                android:text="Visit facebook page"
-                android:background="@drawable/button_radius"
-                android:textSize="16sp"
-                />
+                android:layout_height="1dp"
+                android:background="@color/bordercolor" />
 
             <TextView
                 android:id="@+id/textViewnotificationSetting"
                 android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -116,7 +145,7 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Notification and Settings"
-                android:background="@drawable/button_radius"
+                android:background="@color/backgroun_assh_color"
                 android:textSize="16sp"
                 />
 

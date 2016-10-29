@@ -7,6 +7,40 @@
     android:background="#EFEDF0"
     android:fitsSystemWindows="true"
     tools:context="app.wistem.com.cybe.fragments.ReportFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#455A64"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:id="@+id/main_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Report Cyber Harassment "
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,36 +52,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <android.support.design.widget.AppBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/AppTheme.AppBarOverlay">
 
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:background="#455A64"
-                    app:popupTheme="@style/AppTheme.PopupOverlay">
-
-                    <LinearLayout
-                        android:id="@+id/main_toolbar_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/main_toolbar_title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Report For Harassing"
-                            android:textSize="25sp" />
-
-                    </LinearLayout>
-                </android.support.v7.widget.Toolbar>
-
-            </android.support.design.widget.AppBarLayout>
 
 
             <LinearLayout
@@ -87,7 +92,6 @@
                             android:layout_weight="1"
                             android:checked="false"
                             android:text="me"
-
                             android:textSize="16sp" />
 
                         <RadioButton
@@ -383,4 +387,7 @@
 
         </LinearLayout>
     </ScrollView>
+
+
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
