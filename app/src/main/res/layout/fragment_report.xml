@@ -346,8 +346,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
                         android:text="Would you like to make your report public ?"
                         android:textSize="16sp" />
 

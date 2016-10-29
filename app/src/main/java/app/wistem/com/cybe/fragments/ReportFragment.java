@@ -164,7 +164,7 @@ public class ReportFragment extends Fragment {
                         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
                     }
                     mSessionManager.storeUserInformation(mScarePerson,mScoreNumber,mSummarize,mMoreDetails,mCertainty,mPublicNot);
-                   ;FragmentManager fm = getActivity().getFragmentManager();
+                    FragmentManager fm = getActivity().getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.main, new ReportFeedBackFragment());
                     ft.addToBackStack(null);
@@ -214,7 +214,6 @@ public class ReportFragment extends Fragment {
                                             mScoreNumber = mScareScorePosition;
                                             mTextViewScore.setText(mScareScorePosition +" out of 10");
 
-                                        }else {
                                         }
 
                                     }
