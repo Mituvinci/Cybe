@@ -2,6 +2,7 @@ package app.wistem.com.cybe.adapters;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -25,7 +26,7 @@ public class ScareScoreAdapter extends RecyclerView.Adapter<ScareScoreAdapter.Da
     private Context mContext;
 
     private final static String KNWOING_SOURCE = "knowingSource";
-    private final static String KNOWING_POSITION = "mScareScorePosition";
+    private final static String KNOWING_POSITION = "knowingposition";
 
     public ArrayList<Integer> selectedIds = new ArrayList<Integer>();
     private String knowingSource = "";
@@ -44,7 +45,6 @@ public class ScareScoreAdapter extends RecyclerView.Adapter<ScareScoreAdapter.Da
         public DataObjectHolder(View itemView) {
             super(itemView);
             KnowingSourceTextView = (TextView) itemView.findViewById(R.id.district_adapter_title_name_text_view);
-            radioButton = (RadioButton) itemView.findViewById(R.id.district_adapter_radiobutton);
             linearLayout = (LinearLayout) itemView.findViewById(R.id.district_adapter_choosdistrict);
             itemView.setOnClickListener(this);
 
@@ -90,22 +90,28 @@ public class ScareScoreAdapter extends RecyclerView.Adapter<ScareScoreAdapter.Da
             knowingSourceForSet ="";
         }
 
+        if (selectedIds.contains(position)) {
+            holder.KnowingSourceTextView.setBackgroundResource(R.drawable.button_border_focus_layout);
+            holder.KnowingSourceTextView.setTextColor(Color.WHITE);
+
+            // Log.d("Normal Orange", " text color White");
+        } else {
+            // Log.d("Normal white", " text color Black");
+            holder.KnowingSourceTextView.setBackgroundResource(R.drawable.button_border_layout);
+            holder.KnowingSourceTextView.setTextColor(Color.parseColor("#585656"));
+
+
+        }
+
         holder.KnowingSourceTextView.setText(mDataset.get(position));
 
-        holder.radioButton.setChecked(false);
-        if (selectedIds.contains(position)) {
-            holder.radioButton.setChecked(true);
 
-        } else {
-            holder.radioButton.setChecked(false);
-        }
 
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toggleSelected(new Integer(position));
                 notifyDataSetChanged();
-                holder.radioButton.setChecked(true);
                 SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(mContext).edit();
                 editor.putString(KNWOING_SOURCE, knowingSource);
                 editor.putInt(KNOWING_POSITION, knowingSourcePosition);
@@ -124,25 +130,15 @@ public class ScareScoreAdapter extends RecyclerView.Adapter<ScareScoreAdapter.Da
     public void toggleSelected(Integer position) {
 
 
-
         if (selectedIds.contains(position)) {
-            selectedIds.remove(position);
-            knowingSource = "";
-            knowingSourcePosition = -1;
-
-
         } else {
             try {
                 selectedIds.remove(0);
-                knowingSource = "";
-                knowingSourcePosition = -1;
+
 
             } catch (Exception e) {
 
             }
-
-            knowingSource = mDataset.get(position);
-            knowingSourcePosition = position;
             selectedIds.add(position);
         }
     }

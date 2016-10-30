@@ -34,8 +34,9 @@ import app.wistem.com.cybe.utilities.StoreReportSharedPreferenc;
 public class ReportFragment extends Fragment {
 
     private static String[] mScore = {"1","2","3","4","5","6","7","8","9","10"};
-    private final static String KNOWING_POSITION = "mScareScorePosition";
-    private static String mScareScorePosition;
+    private final static String KNWOING_SOURCE = "knowingSource";
+    private final static String KNOWING_POSITION = "knowingposition";
+    private static String mScareScorePosition = "1";
     private Button mButtonSubmit;
 
     private RadioButton mRadioButtonMe;
@@ -195,7 +196,7 @@ public class ReportFragment extends Fragment {
                 mLayoutManagerChoosDialog = new LinearLayoutManager(getActivity());
                 mRecyclerViewchooseDialog.setHasFixedSize(true);
                 mRecyclerViewchooseDialog.setLayoutManager(mLayoutManagerChoosDialog);
-                mAdapterChoosDialog = new ScareScoreAdapter(Arrays.asList(mScore),getActivity(),"1");
+                mAdapterChoosDialog = new ScareScoreAdapter(Arrays.asList(mScore),getActivity(),mScareScorePosition);
                 mRecyclerViewchooseDialog.setAdapter(mAdapterChoosDialog);
                 mRecyclerViewchooseDialog.setNestedScrollingEnabled(false);
 

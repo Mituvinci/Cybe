@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="30dp"
+android:id="@+id/district_adapter_choosdistrict">
+
+<TextView
+    android:id="@+id/district_adapter_title_name_text_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/district_adapter_choosdistrict">
-
-
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/district_adapter_radiobutton"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/district_adapter_title_name_text_view"
-        android:text="items"/>
-
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:text="Large Text"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textColor="#d4160202"
+    android:textSize="14sp" />
 </LinearLayout>
