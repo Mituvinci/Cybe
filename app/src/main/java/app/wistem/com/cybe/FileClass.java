@@ -1,7 +1,6 @@
 package app.wistem.com.cybe;
 
 import android.os.Environment;
-import android.util.Log;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -31,14 +30,10 @@ public class FileClass {
         final ArrayList<File> songs = getAudioList(Environment
                 .getExternalStorageDirectory());
 
-        Log.d("audioSize", "AllAudioOfMemory: " + Environment.getExternalStorageDirectory());
-
-
         itemsAudio = new String[songs.size()];
 
         for (int i = 0; i < songs.size(); i++) {
             itemsAudio[i] = songs.get(i).getName().toString().replace(".mp3", "").replace(".amr", "");
-            Log.d("song", itemsAudio[i]);
 
         }
         return itemsAudio;
@@ -53,7 +48,6 @@ public class FileClass {
 
         for (int i = 0; i < video.size(); i++) {
             itemsVideo[i] = video.get(i).getName().toString().replace(".mp4", "").replace(".mng", "").replace(".avi", "").replace(".mov", "").replace(".3gp", "");
-            Log.d("songV", itemsVideo[i]);
         }
         return itemsVideo;
     }
