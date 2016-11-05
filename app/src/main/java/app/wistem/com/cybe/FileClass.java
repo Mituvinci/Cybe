@@ -13,6 +13,7 @@ public class FileClass {
 
     private static String[] itemsAudio;
     private static String[] itemsVideo;
+    private static String[] itemsImage;
 
 
     public static boolean isSdCardPresent() {
@@ -39,18 +40,6 @@ public class FileClass {
         return itemsAudio;
     }
 
-    public static String[] AllVideOfMemory() {
-
-        final ArrayList<File> video = getVideoList(Environment
-                .getExternalStorageDirectory());
-
-        itemsVideo = new String[video.size()];
-
-        for (int i = 0; i < video.size(); i++) {
-            itemsVideo[i] = video.get(i).getName().toString().replace(".mp4", "").replace(".mng", "").replace(".avi", "").replace(".mov", "").replace(".3gp", "");
-        }
-        return itemsVideo;
-    }
 
     private static ArrayList<File> getAudioList(File root) {
         ArrayList<File> al = new ArrayList<>();
@@ -71,6 +60,19 @@ public class FileClass {
         return al;
     }
 
+    public static String[] AllVideOfMemory() {
+
+        final ArrayList<File> video = getVideoList(Environment
+                .getExternalStorageDirectory());
+
+        itemsVideo = new String[video.size()];
+
+        for (int i = 0; i < video.size(); i++) {
+            itemsVideo[i] = video.get(i).getName().toString().replace(".mp4", "").replace(".mng", "").replace(".avi", "").replace(".mov", "").replace(".3gp", "");
+        }
+        return itemsVideo;
+    }
+
 
     private static ArrayList<File> getVideoList(File root) {
         ArrayList<File> al = new ArrayList<>();
@@ -85,6 +87,46 @@ public class FileClass {
                         || files[i].getName().endsWith(".mng")
                         || files[i].getName().endsWith(".avi")
                         || files[i].getName().endsWith(".mov")) {
+                    al.add(files[i]);
+                }
+            }
+        }
+        return al;
+    }
+
+
+
+    public static String[] AllImagesOfMemory() {
+
+
+        final ArrayList<File> songs = getImageList(Environment
+                .getExternalStorageDirectory());
+
+        itemsImage = new String[songs.size()];
+
+        for (int i = 0; i < songs.size(); i++) {
+            itemsImage[i] = songs.get(i).getName().toString().replace(".JPEG", "").replace(".IMG", "").replace(".PNG", "").replace(".BMP", "");
+
+        }
+        return itemsImage;
+    }
+
+
+    private static ArrayList<File> getImageList(File root) {
+        ArrayList<File> al = new ArrayList<>();
+        File[] files = root.listFiles();
+
+        // Log.d("audioSizeroot", "AllAudioOfMemory: "+files.length);
+
+        if (root.exists() && files != null) {
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].isDirectory() && !files[i].isHidden()) {
+                    al.addAll(getImageList(files[i]));
+                } else if (files[i].getName().endsWith(".JPEG")
+                        || files[i].getName().endsWith(".IMG")
+                        || files[i].getName().endsWith(".PNG")
+                        || files[i].getName().endsWith(".BMP")
+                        ) {
                     al.add(files[i]);
                 }
             }

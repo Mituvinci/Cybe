@@ -58,6 +58,14 @@ public class FileListFragment extends Fragment {
                 Toast.makeText(getActivity(),"Your phone doesn't have any SD card",Toast.LENGTH_SHORT).show();
             }
 
+        }else if (fileType.equals("image")) {
+
+            if (FileClass.isSdCardPresent()) {
+                items = FileClass.AllImagesOfMemory();
+            }else {
+                Toast.makeText(getActivity(),"Your phone doesn't have any SD card",Toast.LENGTH_SHORT).show();
+            }
+
         }
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler);

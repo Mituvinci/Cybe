@@ -90,7 +90,7 @@ public class ReportFragment extends Fragment {
         mEditTextMoreDetails = (EditText) view.findViewById(R.id.edittextMoredetails);
         mTextViewAudio = (TextView) view.findViewById(R.id.textViewAudio);
         mTextViewVideo = (TextView) view.findViewById(R.id.textViewVideo);
-        mTextViewImage = (TextView) view.findViewById(R.id.textViewLink);
+        mTextViewImage = (TextView) view.findViewById(R.id.textViewImage);
         scareScore();
         submitReport();
 
@@ -179,6 +179,19 @@ public class ReportFragment extends Fragment {
                 Bundle bundle = new Bundle();
 
                 bundle.putString("file","video");
+                fragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().addToBackStack(null)
+                        .replace(R.id.main, fragment).commit();
+            }
+        });
+
+
+        mTextViewImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new FileListFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("file","image");
                 fragment.setArguments(bundle);
                 getFragmentManager().beginTransaction().addToBackStack(null)
                         .replace(R.id.main, fragment).commit();
