@@ -78,9 +78,7 @@ public class DashBoardActivity extends AppCompatActivity {
                 });
 
 
-
-
-        }
+    }
 
     private void enterForum(){
 

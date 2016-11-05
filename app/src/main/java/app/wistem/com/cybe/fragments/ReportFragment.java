@@ -49,6 +49,10 @@ public class ReportFragment extends Fragment {
     private EditText mEditTextSummarize;
     private EditText mEditTextMoreDetails;
 
+    private TextView mTextViewAudio;
+    private TextView mTextViewVideo;
+    private TextView mTextViewImage;
+
     private static String mScarePerson;
     private static String mCertainty;
     private static String mPublicNot;
@@ -57,6 +61,7 @@ public class ReportFragment extends Fragment {
     private static String mMoreDetails = "";
 
     private StoreReportSharedPreferenc mSessionManager;
+
 
 
     private TextView mTextViewScore;
@@ -83,8 +88,13 @@ public class ReportFragment extends Fragment {
 
         mEditTextSummarize = (EditText) view.findViewById(R.id.editTextSummarize);
         mEditTextMoreDetails = (EditText) view.findViewById(R.id.edittextMoredetails);
+        mTextViewAudio = (TextView) view.findViewById(R.id.textViewAudio);
+        mTextViewVideo = (TextView) view.findViewById(R.id.textViewVideo);
+        mTextViewImage = (TextView) view.findViewById(R.id.textViewLink);
         scareScore();
         submitReport();
+
+        fileFetch();
 
         mRadioButtonMe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,7 +156,34 @@ public class ReportFragment extends Fragment {
         return  view;
     }
 
-    private void radioButtonValue(){
+    private void fileFetch(){
+
+        mTextViewAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Fragment fragment = new FileListFragment();
+                Bundle bundle = new Bundle();
+
+                bundle.putString("file","audio");
+                fragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().addToBackStack(null)
+                        .replace(R.id.main, fragment).commit();
+            }
+        });
+
+        mTextViewVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new FileListFragment();
+                Bundle bundle = new Bundle();
+
+                bundle.putString("file","video");
+                fragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().addToBackStack(null)
+                        .replace(R.id.main, fragment).commit();
+            }
+        });
 
 
     }

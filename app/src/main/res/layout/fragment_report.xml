@@ -207,6 +207,7 @@
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
                             android:text="Audio"
+                            android:id="@+id/textViewAudio"
                             android:textColor="#000000"
                             android:textSize="16sp" />
 
@@ -217,6 +218,7 @@
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
                             android:text="Video"
+                            android:id="@+id/textViewVideo"
                             android:textColor="#000000"
 
                             android:textSize="16sp" />
@@ -228,6 +230,7 @@
                             android:layout_weight="1"
                             android:text="Image"
                             android:textColor="#000000"
+                            android:id="@+id/textViewImage"
                             android:textSize="16sp" />
 
                         <TextView
@@ -236,6 +239,7 @@
                             android:layout_marginTop="16dp"
                             android:layout_weight="1"
                             android:text="Link"
+                            android:id="@+id/textViewLink"
                             android:textColor="#000000"
                             android:textSize="16sp" />
                     </LinearLayout>
