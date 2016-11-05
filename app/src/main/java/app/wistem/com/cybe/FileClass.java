@@ -4,6 +4,7 @@ import android.os.Environment;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by mitu on 11/3/16.
@@ -96,7 +97,7 @@ public class FileClass {
 
 
 
-    public static String[] AllImagesOfMemory() {
+    /*public static String[] AllImagesOfMemory() {
 
 
         final ArrayList<File> songs = getImageList(Environment
@@ -105,12 +106,20 @@ public class FileClass {
         itemsImage = new String[songs.size()];
 
         for (int i = 0; i < songs.size(); i++) {
-            itemsImage[i] = songs.get(i).getName().toString().replace(".JPEG", "").replace(".IMG", "").replace(".PNG", "").replace(".BMP", "");
+            itemsImage[i] = songs.get(i).getName().toString();
 
         }
         return itemsImage;
-    }
+    }*/
+    public static List<File> AllImagesOfMemory() {
 
+
+        final List<File> image = getImageList(Environment
+                .getExternalStorageDirectory());
+
+
+        return image;
+    }
 
     private static ArrayList<File> getImageList(File root) {
         ArrayList<File> al = new ArrayList<>();
@@ -122,12 +131,15 @@ public class FileClass {
             for (int i = 0; i < files.length; i++) {
                 if (files[i].isDirectory() && !files[i].isHidden()) {
                     al.addAll(getImageList(files[i]));
-                } else if (files[i].getName().endsWith(".JPEG")
-                        || files[i].getName().endsWith(".IMG")
-                        || files[i].getName().endsWith(".PNG")
-                        || files[i].getName().endsWith(".BMP")
+                } else if (files[i].getName().endsWith(".jpeg")
+                        || files[i].getName().endsWith(".img")
+                        || files[i].getName().endsWith(".png")
+                        || files[i].getName().endsWith(".bmp")
                         ) {
-                    al.add(files[i]);
+                    al.add(files[i].getAbsoluteFile());
+                   /* Log.d("image1", "getImageList: "+root.getAbsolutePath());
+                    Log.d("image2", "getImageList: "+root.getAbsolutePath()+""+al.get(i));
+                    Log.d("image3", "getImageList: "+files[i].getAbsolutePath());*/
                 }
             }
         }

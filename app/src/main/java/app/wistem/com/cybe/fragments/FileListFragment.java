@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import java.io.File;
 import java.util.Arrays;
+import java.util.List;
 
 import app.wistem.com.cybe.FileClass;
 import app.wistem.com.cybe.R;
@@ -23,6 +25,8 @@ public class FileListFragment extends Fragment {
     private FileNameAdapter mAdapter;
 
     private String[] items ;
+
+    private List<File> image;
     private Bundle mBundles;
 
 
@@ -37,7 +41,8 @@ public class FileListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_file_list, container, false);
-
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mBundles = this.getArguments();
         String fileType = mBundles.getString("file");
 
@@ -45,6 +50,8 @@ public class FileListFragment extends Fragment {
 
             if (FileClass.isSdCardPresent()) {
                 items = FileClass.AllAudioOfMemory();
+                mAdapter = new FileNameAdapter(getActivity(), Arrays.asList(items));
+
             }else {
                 Toast.makeText(getActivity(),"Your phone doesn't have any SD card",Toast.LENGTH_SHORT).show();
             }
@@ -54,6 +61,8 @@ public class FileListFragment extends Fragment {
 
             if (FileClass.isSdCardPresent()) {
                 items = FileClass.AllVideOfMemory();
+                mAdapter = new FileNameAdapter(getActivity(), Arrays.asList(items));
+
             }else {
                 Toast.makeText(getActivity(),"Your phone doesn't have any SD card",Toast.LENGTH_SHORT).show();
             }
@@ -61,21 +70,22 @@ public class FileListFragment extends Fragment {
         }else if (fileType.equals("image")) {
 
             if (FileClass.isSdCardPresent()) {
-                items = FileClass.AllImagesOfMemory();
+                image = FileClass.AllImagesOfMemory();
+                mAdapter = new FileNameAdapter(getActivity(),image,true);
+
             }else {
                 Toast.makeText(getActivity(),"Your phone doesn't have any SD card",Toast.LENGTH_SHORT).show();
             }
 
         }
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mAdapter = new FileNameAdapter(getActivity(), Arrays.asList(items));
         mRecyclerView.setAdapter(mAdapter);
 
 
         return view;
     }
+
+
 
 
 }
