@@ -1,6 +1,7 @@
 package app.wistem.com.cybe;
 
 import android.os.Environment;
+import android.util.Log;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -121,8 +122,8 @@ public class FileClass {
         return image;
     }
 
-    private static ArrayList<File> getImageList(File root) {
-        ArrayList<File> al = new ArrayList<>();
+    private static List<File> getImageList(File root) {
+        List<File> al = new ArrayList<>();
         File[] files = root.listFiles();
 
         // Log.d("audioSizeroot", "AllAudioOfMemory: "+files.length);
@@ -137,6 +138,10 @@ public class FileClass {
                         || files[i].getName().endsWith(".bmp")
                         ) {
                     al.add(files[i].getAbsoluteFile());
+
+                    Log.d("image1", "getImageList: "+root.getAbsolutePath());
+                    Log.d("image2", "getImageList: "+al.get(i));
+
                    /* Log.d("image1", "getImageList: "+root.getAbsolutePath());
                     Log.d("image2", "getImageList: "+root.getAbsolutePath()+""+al.get(i));
                     Log.d("image3", "getImageList: "+files[i].getAbsolutePath());*/

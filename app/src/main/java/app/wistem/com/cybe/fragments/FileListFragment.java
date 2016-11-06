@@ -16,6 +16,7 @@ import java.util.List;
 import app.wistem.com.cybe.FileClass;
 import app.wistem.com.cybe.R;
 import app.wistem.com.cybe.adapters.FileNameAdapter;
+import app.wistem.com.cybe.adapters.ImageFileAdapter;
 
 
 public class FileListFragment extends Fragment {
@@ -23,6 +24,7 @@ public class FileListFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private FileNameAdapter mAdapter;
+    private ImageFileAdapter mImageAdapter;
 
     private String[] items ;
 
@@ -51,6 +53,8 @@ public class FileListFragment extends Fragment {
             if (FileClass.isSdCardPresent()) {
                 items = FileClass.AllAudioOfMemory();
                 mAdapter = new FileNameAdapter(getActivity(), Arrays.asList(items));
+                mRecyclerView.setAdapter(mAdapter);
+
 
             }else {
                 Toast.makeText(getActivity(),"Your phone doesn't have any SD card",Toast.LENGTH_SHORT).show();
@@ -62,6 +66,8 @@ public class FileListFragment extends Fragment {
             if (FileClass.isSdCardPresent()) {
                 items = FileClass.AllVideOfMemory();
                 mAdapter = new FileNameAdapter(getActivity(), Arrays.asList(items));
+                mRecyclerView.setAdapter(mAdapter);
+
 
             }else {
                 Toast.makeText(getActivity(),"Your phone doesn't have any SD card",Toast.LENGTH_SHORT).show();
@@ -71,7 +77,9 @@ public class FileListFragment extends Fragment {
 
             if (FileClass.isSdCardPresent()) {
                 image = FileClass.AllImagesOfMemory();
-                mAdapter = new FileNameAdapter(getActivity(),image,true);
+                mImageAdapter = new ImageFileAdapter(getActivity(),image);
+                mRecyclerView.setAdapter(mImageAdapter);
+
 
             }else {
                 Toast.makeText(getActivity(),"Your phone doesn't have any SD card",Toast.LENGTH_SHORT).show();
@@ -79,7 +87,6 @@ public class FileListFragment extends Fragment {
 
         }
 
-        mRecyclerView.setAdapter(mAdapter);
 
 
         return view;
