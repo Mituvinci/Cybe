@@ -113,8 +113,8 @@ public class ScareScoreAdapter extends RecyclerView.Adapter<ScareScoreAdapter.Da
                 toggleSelected(new Integer(position));
                 notifyDataSetChanged();
                 SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(mContext).edit();
-                editor.putString(KNWOING_SOURCE, knowingSource);
-                editor.putInt(KNOWING_POSITION, knowingSourcePosition);
+                editor.putString(KNWOING_SOURCE, mDataset.get(position));
+                editor.putInt(KNOWING_POSITION, position);
                 editor.apply();
 
             }

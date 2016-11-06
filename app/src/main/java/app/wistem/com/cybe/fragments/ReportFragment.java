@@ -12,6 +12,8 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.util.Arrays;
@@ -55,12 +58,12 @@ public class ReportFragment extends Fragment {
     private TextView mTextViewVideo;
     private TextView mTextViewImage;
 
-    private static String mScarePerson;
-    private static String mCertainty;
-    private static String mPublicNot;
-    private static String mScoreNumber;
-    private static String mSummarize ="";
-    private static String mMoreDetails = "";
+    private  String mScarePerson;
+    private  String mCertainty;
+    private  String mPublicNot;
+    private  String mScoreNumber;
+    private  String mSummarize ="";
+    private  String mMoreDetails = "";
 
     private StoreReportSharedPreferenc mSessionManager;
     private List<File> image;
@@ -217,12 +220,19 @@ public class ReportFragment extends Fragment {
                         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
                     }
                     mSessionManager.storeUserInformation(mScarePerson,mScoreNumber,mSummarize,mMoreDetails,mCertainty,mPublicNot);
+
+                     Log.d("report", "onClick: "+mScarePerson+" ,"+mScoreNumber+" , "+mSummarize+" ,"+mMoreDetails+" , "+mCertainty+" ,"+mPublicNot);
+
+                if (!TextUtils.isEmpty(mPublicNot)) {
                     FragmentManager fm = getActivity().getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.main, new ReportFeedBackFragment());
                     ft.addToBackStack(null);
                     fm.popBackStackImmediate();
                     ft.commit();
+                }else {
+                    Toast.makeText(getActivity(),"Choose to post it in public or Not",Toast.LENGTH_SHORT).show();
+                }
 
 
 
