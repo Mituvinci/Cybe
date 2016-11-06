@@ -6,12 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
-import java.io.File;
 import java.util.List;
 
 import app.wistem.com.cybe.R;
@@ -22,10 +18,8 @@ import app.wistem.com.cybe.R;
 
 public class FileNameAdapter extends RecyclerView.Adapter<FileNameAdapter.CustomViewHolder>  {
     private List<String> mDataSet;
-    private List<File> mImage;
     private Context mContext;
     private static customInterface customInterface;
-    private boolean mCheckIfImage = false;
 
     public FileNameAdapter(Context context, List<String>mDataSet) {
         this.mDataSet = mDataSet;
@@ -35,15 +29,7 @@ public class FileNameAdapter extends RecyclerView.Adapter<FileNameAdapter.Custom
 
     }
 
-    public FileNameAdapter(Context context, List<File> mDataSet,boolean Isimage) {
-        this.mImage = mDataSet;
-        mContext  = context;
-        mCheckIfImage = Isimage;
 
-        Log.d("recycler :",mDataSet.size()+"");
-
-
-    }
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_layout_filename,parent,false);
@@ -53,16 +39,10 @@ public class FileNameAdapter extends RecyclerView.Adapter<FileNameAdapter.Custom
 
     @Override
     public void onBindViewHolder(CustomViewHolder holder,final int position) {
-        if (mCheckIfImage){
-            holder.mNameTextView.setVisibility(View.GONE);
-            holder.mImageView.setVisibility(View.VISIBLE);
-            Glide.with(mContext).load(mDataSet.get(position)).into(holder.mImageView);
 
-
-        }else {
             holder.mNameTextView.setText(mDataSet.get(position));
 
-        }
+
         Log.d("recycler :", position + " " + mDataSet.get(position) + "");
 
     }
@@ -74,11 +54,9 @@ public class FileNameAdapter extends RecyclerView.Adapter<FileNameAdapter.Custom
 
     public static class  CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView mNameTextView;
-        private ImageView mImageView;
         public CustomViewHolder(View itemView) {
             super(itemView);
             mNameTextView = (TextView) itemView.findViewById(R.id.name_text_view);
-            mImageView = (ImageView) itemView.findViewById(R.id.imageId);
             itemView.setOnClickListener(this);
 
         }

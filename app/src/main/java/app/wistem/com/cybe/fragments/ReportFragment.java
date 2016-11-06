@@ -21,7 +21,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import java.io.File;
 import java.util.Arrays;
+import java.util.List;
 
 import app.wistem.com.cybe.R;
 import app.wistem.com.cybe.adapters.ScareScoreAdapter;
@@ -61,6 +63,7 @@ public class ReportFragment extends Fragment {
     private static String mMoreDetails = "";
 
     private StoreReportSharedPreferenc mSessionManager;
+    private List<File> image;
 
 
 
@@ -189,10 +192,9 @@ public class ReportFragment extends Fragment {
         mTextViewImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fragment = new FileListFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString("file","image");
-                fragment.setArguments(bundle);
+
+
+                Fragment fragment = new ImageFragment();
                 getFragmentManager().beginTransaction().addToBackStack(null)
                         .replace(R.id.main, fragment).commit();
             }

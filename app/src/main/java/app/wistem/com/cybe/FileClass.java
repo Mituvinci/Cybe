@@ -136,11 +136,12 @@ public class FileClass {
                         || files[i].getName().endsWith(".img")
                         || files[i].getName().endsWith(".png")
                         || files[i].getName().endsWith(".bmp")
+                        ||files[i].getName().endsWith(".jpg")
                         ) {
                     al.add(files[i].getAbsoluteFile());
 
                     Log.d("image1", "getImageList: "+root.getAbsolutePath());
-                    Log.d("image2", "getImageList: "+al.get(i));
+                 //   Log.d("image2", "getImageList: "+al.get(i));
 
                    /* Log.d("image1", "getImageList: "+root.getAbsolutePath());
                     Log.d("image2", "getImageList: "+root.getAbsolutePath()+""+al.get(i));

@@ -30,7 +30,7 @@ public class ImageFileAdapter  extends RecyclerView.Adapter<ImageFileAdapter.Cus
         this.mImageList = mDataSet;
         mContext  = context;
 
-       // Log.d("recycler :",mDataSet.size()+"");
+        Log.d("recycler :",mDataSet.size()+"");
 
 
     }
@@ -43,7 +43,6 @@ public class ImageFileAdapter  extends RecyclerView.Adapter<ImageFileAdapter.Cus
 
     @Override
     public void onBindViewHolder(CustomViewHolder holder, int position) {
-
 
         Glide.with(mContext).load(mImageList.get(position)).into(holder.mImageView);
 

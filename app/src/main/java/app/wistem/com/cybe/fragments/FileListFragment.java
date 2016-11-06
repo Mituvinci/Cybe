@@ -9,14 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import java.io.File;
 import java.util.Arrays;
-import java.util.List;
 
 import app.wistem.com.cybe.FileClass;
 import app.wistem.com.cybe.R;
 import app.wistem.com.cybe.adapters.FileNameAdapter;
-import app.wistem.com.cybe.adapters.ImageFileAdapter;
 
 
 public class FileListFragment extends Fragment {
@@ -24,11 +21,8 @@ public class FileListFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private FileNameAdapter mAdapter;
-    private ImageFileAdapter mImageAdapter;
-
     private String[] items ;
 
-    private List<File> image;
     private Bundle mBundles;
 
 
@@ -67,18 +61,6 @@ public class FileListFragment extends Fragment {
                 items = FileClass.AllVideOfMemory();
                 mAdapter = new FileNameAdapter(getActivity(), Arrays.asList(items));
                 mRecyclerView.setAdapter(mAdapter);
-
-
-            }else {
-                Toast.makeText(getActivity(),"Your phone doesn't have any SD card",Toast.LENGTH_SHORT).show();
-            }
-
-        }else if (fileType.equals("image")) {
-
-            if (FileClass.isSdCardPresent()) {
-                image = FileClass.AllImagesOfMemory();
-                mImageAdapter = new ImageFileAdapter(getActivity(),image);
-                mRecyclerView.setAdapter(mImageAdapter);
 
 
             }else {
