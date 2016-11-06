@@ -13,7 +13,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -221,7 +220,7 @@ public class ReportFragment extends Fragment {
                     }
                     mSessionManager.storeUserInformation(mScarePerson,mScoreNumber,mSummarize,mMoreDetails,mCertainty,mPublicNot);
 
-                     Log.d("report", "onClick: "+mScarePerson+" ,"+mScoreNumber+" , "+mSummarize+" ,"+mMoreDetails+" , "+mCertainty+" ,"+mPublicNot);
+                    // Log.d("report", "onClick: "+mScarePerson+" ,"+mScoreNumber+" , "+mSummarize+" ,"+mMoreDetails+" , "+mCertainty+" ,"+mPublicNot);
 
                 if (!TextUtils.isEmpty(mPublicNot)) {
                     FragmentManager fm = getActivity().getFragmentManager();

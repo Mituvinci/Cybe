@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.Arrays;
 
-import app.wistem.com.cybe.FileClass;
+import app.wistem.com.cybe.utilities.FileClass;
 import app.wistem.com.cybe.R;
 import app.wistem.com.cybe.adapters.FileNameAdapter;
 

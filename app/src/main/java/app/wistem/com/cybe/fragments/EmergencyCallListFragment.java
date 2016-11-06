@@ -11,10 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 import app.wistem.com.cybe.R;
-import app.wistem.com.cybe.adapters.RecyclerViewAdapterFirstWay;
+import app.wistem.com.cybe.adapters.EmergencyCallListAdapter;
+import app.wistem.com.cybe.modelclass.PhoneNumberModel;
+import app.wistem.com.cybe.utilities.ImportantPhoneNumbers;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,9 +25,11 @@ import app.wistem.com.cybe.adapters.RecyclerViewAdapterFirstWay;
 public class EmergencyCallListFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private RecyclerViewAdapterFirstWay mAdapter;
-    private String[] items = {"375348",
-    "423948","324923","248293","237489"};
+    private EmergencyCallListAdapter mAdapter;
+    private List<PhoneNumberModel> mPhoneNumberList = new ArrayList<>();
+    private ImportantPhoneNumbers mImportantPhoneNumbers;
+
+
     public EmergencyCallListFragment() {
         // Required empty public constructor
     }
@@ -35,15 +40,18 @@ public class EmergencyCallListFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_emergency_call_list, container, false);
+        mImportantPhoneNumbers = ImportantPhoneNumbers.getInstance();
+
+        mPhoneNumberList = mImportantPhoneNumbers.getPhoneNumber();
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mAdapter = new RecyclerViewAdapterFirstWay(getActivity(), Arrays.asList(items));
+        mAdapter = new EmergencyCallListAdapter(getActivity(), mPhoneNumberList);
         mRecyclerView.setAdapter(mAdapter);
-        mAdapter.setOnItemClickListener(new RecyclerViewAdapterFirstWay.customInterface() {
+        mAdapter.setOnItemClickListener(new EmergencyCallListAdapter.customInterface() {
             @Override
             public void onItemClick(int position, View v) {
 
-                String phoneNumber = items[position];
+                String phoneNumber = mPhoneNumberList.get(position).getmPhoneNumber();
                 Intent dial = new Intent();
                 dial.setAction("android.intent.action.DIAL");
                 dial.setData(Uri.parse("tel:" + phoneNumber));

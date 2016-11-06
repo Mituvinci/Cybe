@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.util.List;
 
-import app.wistem.com.cybe.FileClass;
+import app.wistem.com.cybe.utilities.FileClass;
 import app.wistem.com.cybe.R;
 import app.wistem.com.cybe.adapters.ImageFileAdapter;
 

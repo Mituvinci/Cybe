@@ -11,15 +11,16 @@ import android.widget.TextView;
 import java.util.List;
 
 import app.wistem.com.cybe.R;
+import app.wistem.com.cybe.modelclass.PhoneNumberModel;
 
 /**
  * Created by Hi on 09-Sep-16.
  */
-public class RecyclerViewAdapterFirstWay extends RecyclerView.Adapter<RecyclerViewAdapterFirstWay.CustomViewHolder>  {
-    private List<String> mDataSet;
+public class EmergencyCallListAdapter extends RecyclerView.Adapter<EmergencyCallListAdapter.CustomViewHolder>  {
+    private List<PhoneNumberModel> mDataSet;
     private Context mContext;
     private static customInterface customInterface;
-    public RecyclerViewAdapterFirstWay(Context context, List<String> mDataSet) {
+    public EmergencyCallListAdapter(Context context, List<PhoneNumberModel> mDataSet) {
         this.mDataSet = mDataSet;
        mContext  = context;
         Log.d("recycler :",mDataSet.size()+"");
@@ -28,14 +29,14 @@ public class RecyclerViewAdapterFirstWay extends RecyclerView.Adapter<RecyclerVi
     }
     @Override
     public CustomViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_music_text_layout,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_emergency_call_list_layout,parent,false);
         CustomViewHolder customViewHolder = new CustomViewHolder(view);
         return customViewHolder;
     }
 
     @Override
     public void onBindViewHolder(CustomViewHolder holder,final int position) {
-        holder.mNameTextView.setText(mDataSet.get(position));
+        holder.mNameTextView.setText(mDataSet.get(position).getmAreaName());
         Log.d("recycler :", position + " " + mDataSet.get(position) + "");
 
     }
