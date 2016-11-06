@@ -39,10 +39,7 @@
                 android:textSize="16sp"
 
                  />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/bordercolor" />
+
             <TextView
                 android:id="@+id/textViewnewsFeed"
                 android:layout_gravity="center"
@@ -61,10 +58,7 @@
                 android:textSize="16sp"
                 />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/bordercolor" />
+
 
             <TextView
                 android:id="@+id/textViewnewsEmergencyCallList"
@@ -84,10 +78,7 @@
                 android:textSize="16sp"
                 />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/bordercolor" />
+
 
             <TextView
                 android:id="@+id/textViewnewsEnterForum"
@@ -106,10 +97,7 @@
                 android:background="@color/backgroun_assh_color"
                 android:textSize="16sp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/bordercolor" />
+
             <TextView
                 android:id="@+id/textViewVisitFaceBook"
                 android:layout_gravity="center"
@@ -127,10 +115,7 @@
                 android:textSize="16sp"
                 />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/bordercolor" />
+
 
             <TextView
                 android:id="@+id/textViewnotificationSetting"

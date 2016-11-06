@@ -75,7 +75,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="Have you or some you know been harassed ?"
+                        android:text="Have you or someone you know been harassed ?"
                         android:textSize="16sp" />
 
                     <LinearLayout
