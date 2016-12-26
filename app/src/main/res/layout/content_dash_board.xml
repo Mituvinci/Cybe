@@ -28,7 +28,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="#838383"
-            android:background="#F1F1F1"
+            android:background="@drawable/border_white"
             android:textStyle="bold"
             android:textSize="14sp"
             android:paddingTop="10dp"
@@ -50,7 +50,7 @@
             android:orientation="vertical">
 
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/textViewCallList"
                 android:layout_width="match_parent"
                 style="@style/Widget.AppCompat.Button.Colored"
@@ -66,6 +66,24 @@
                 android:textStyle="normal"
                 android:textSize="16sp"
 
+                />-->
+
+            <TextView
+                android:id="@+id/textViewnewsEmergencyCallList"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Colored"
+
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Emergency Call List"
+                android:background="@drawable/purple_border"
+                android:textSize="16sp"
                 />
 
 
@@ -87,46 +105,6 @@
                  />
 
             <TextView
-                android:id="@+id/textViewnewsFeed"
-                android:layout_gravity="center"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textStyle="normal"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:text="Check news Feed"
-                android:background="@drawable/purple_border"
-                android:textSize="16sp"
-                />
-
-
-
-            <TextView
-                android:id="@+id/textViewnewsEmergencyCallList"
-                android:layout_gravity="center"
-                style="@style/Widget.AppCompat.Button.Colored"
-
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textStyle="normal"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Emergency Call List"
-                android:background="@drawable/purple_border"
-                android:textSize="16sp"
-                />
-
-
-
-            <TextView
                 android:id="@+id/textViewnewsEnterForum"
                 android:layout_gravity="center"
                 style="@style/Widget.AppCompat.Button.Colored"
@@ -138,11 +116,52 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="Enter Our Forum"
                 android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
+
+            <TextView
+                android:id="@+id/textViewnewsFeed"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Check news Feed"
+                android:background="@drawable/purple_border"
+                android:textSize="16sp"
+                />
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/textViewnotificationSetting"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Notification and Settings"
+                android:background="@drawable/purple_border"
+                android:textSize="16sp"
+                />
+
 
             <TextView
                 android:id="@+id/textViewVisitFaceBook"
@@ -163,22 +182,7 @@
 
 
 
-            <TextView
-                android:id="@+id/textViewnotificationSetting"
-                android:layout_gravity="center"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textStyle="normal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="16dp"
-                android:text="Notification and Settings"
-                android:background="@drawable/purple_border"
-                android:textSize="16sp"
-                />
+
 
 
 
