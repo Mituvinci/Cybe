@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#EFEDF0"
+    android:background="#B8CCE1"
     android:id="@+id/main"
     tools:context="app.wistem.com.cybe.DashBoardActivity">
 
@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#455A64"
+            android:background="#2C4F6A"
 
             app:popupTheme="@style/AppTheme.PopupOverlay" >
             <LinearLayout
@@ -32,24 +32,34 @@
                     android:id="@+id/main_toolbar_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Welcome to Cybe"
+                    android:text="CYBE"
                     android:textSize="25sp"/>
 
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#E5E5E5"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="your personal assistant 24/7"
+                android:textColor="#9EA09B"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                />
+        </LinearLayout>
+
+
+
 
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_dash_board" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="64dp"
-        android:layout_height="62dp"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_menu_call"
-        app:backgroundTint="#455A64"
-        />
+
 
 </android.support.design.widget.CoordinatorLayout>

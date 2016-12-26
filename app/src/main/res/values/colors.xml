@@ -8,5 +8,6 @@
     <color name="bordercolor">#BDBDBD</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="backgroun_assh_color">#EFEDF0</color>
+    <color name="backgroun_assh_color">#B8CCE1</color>
+    <color name="purple">#3F4274</color>
 </resources>

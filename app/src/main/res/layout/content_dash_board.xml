@@ -14,6 +14,32 @@
     tools:context="app.wistem.com.cybe.DashBoardActivity"
     tools:showIn="@layout/activity_dash_board">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewsplash"
+            android:layout_width="match_parent"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Welcome to your dashboard! using this following menu list, you can file a complain and let us help you. your information is secured with us and please do not hesitate to report."
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#838383"
+            android:background="#F1F1F1"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginBottom="16dp"
+
+            />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:scrollbars="none"
@@ -22,6 +48,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textViewCallList"
+                android:layout_width="match_parent"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Emergency call list"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/purple_border"
+                android:textStyle="normal"
+                android:textSize="16sp"
+
+                />
+
 
             <TextView
                 android:id="@+id/textViewreport"
@@ -33,9 +79,9 @@
                 android:text="Report Cyber Harassment"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:background="@color/backgroun_assh_color"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/purple_border"
+                android:textStyle="normal"
                 android:textSize="16sp"
 
                  />
@@ -45,8 +91,8 @@
                 android:layout_gravity="center"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textStyle="normal"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="8dp"
@@ -54,7 +100,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:text="Check news Feed"
-                android:background="@color/backgroun_assh_color"
+                android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
 
@@ -66,15 +112,15 @@
                 style="@style/Widget.AppCompat.Button.Colored"
 
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textStyle="normal"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="Emergency Call List"
-                android:background="@color/backgroun_assh_color"
+                android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
 
@@ -86,15 +132,15 @@
                 style="@style/Widget.AppCompat.Button.Colored"
 
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textStyle="normal"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Enter Our Forum"
-                android:background="@color/backgroun_assh_color"
+                android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
 
@@ -103,15 +149,15 @@
                 android:layout_gravity="center"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textStyle="normal"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="Visit facebook page"
-                android:background="@color/backgroun_assh_color"
+                android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
 
@@ -122,15 +168,15 @@
                 android:layout_gravity="center"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textStyle="normal"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Notification and Settings"
-                android:background="@color/backgroun_assh_color"
+                android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
 

@@ -3,7 +3,6 @@ package app.wistem.com.cybe;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -48,20 +47,7 @@ public class DashBoardActivity extends AppCompatActivity {
         mTextViewNotificationSetting.setText("Notification and Settings");
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //10921
 
-                Intent dial = new Intent();
-                dial.setAction("android.intent.action.DIAL");
-                dial.setData(Uri.parse("tel:" + "10921"));
-                startActivity(dial);
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-            }
-        });
     }
 
 
