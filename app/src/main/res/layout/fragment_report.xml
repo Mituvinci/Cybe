@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEDF0"
+    android:background="#B8CCE1"
     android:fitsSystemWindows="true"
     tools:context="app.wistem.com.cybe.fragments.ReportFragment">
     <LinearLayout
@@ -20,7 +20,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#455A64"
+            android:background="#2C4F6A"
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <LinearLayout
@@ -34,13 +34,44 @@
                     android:id="@+id/main_toolbar_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Report Cyber Harassment "
-                    android:textSize="25sp" />
+                    android:text="CYBE"
+                    android:textSize="25sp"/>
 
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#E5E5E5"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="your personal assistant 24/7"
+                android:textColor="#9EA09B"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                />
+        </LinearLayout>
 
     </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#6EABD7"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REPORT CRIME"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -62,58 +93,7 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:elevation="30dp"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:text="Have you or someone you know been harassed ?"
-                        android:textSize="16sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="32dp"
-                        android:layout_marginTop="16dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-
-                        <RadioButton
-                            android:id="@+id/radioButtonMe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:checked="false"
-                            android:text="me"
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/radioButtonSomeoneIknow"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="someone i know"
-                            android:checked="false"
-                            android:textSize="16sp" />
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/bordercolor" />
+                >
 
 
                 <LinearLayout
@@ -123,75 +103,12 @@
                     android:paddingBottom="@dimen/activity_vertical_margin"
                     android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:paddingTop="@dimen/activity_vertical_margin">
+                    android:layout_marginTop="16dp">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="One a Scale of 1 to 10, how scared are you?"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/textViewScoreit"
-                        android:layout_width="match_parent"
-                        android:layout_height="24dp"
-                        android:layout_marginTop="16dp"
-                        android:drawableLeft="@drawable/arrow_down_inorder"
-                        android:text="Score it"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/bordercolor" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingBottom="@dimen/activity_vertical_margin"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Please Summarize your incident here :"
-                        android:textSize="16sp" />
-
-                    <EditText
-                        android:id="@+id/editTextSummarize"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="16dp"
-                        android:background="@drawable/border"
-                        android:hint="  Write here.."
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/bordercolor" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingBottom="@dimen/activity_vertical_margin"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Attach Evidence here :"
+                        android:text="Attach Evidence:"
                         android:textSize="16sp" />
 
                     <LinearLayout
@@ -247,89 +164,92 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="@color/bordercolor" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingBottom="@dimen/activity_vertical_margin"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+                    android:elevation="30dp"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Please insert more details of harasser if any :"
-                        android:textSize="16sp" />
-
-                    <EditText
-                        android:id="@+id/edittextMoredetails"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="16dp"
-                        android:background="@drawable/border"
-                        android:hint="  Write here.."
-                        android:textSize="16sp" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/bordercolor" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingBottom="@dimen/activity_vertical_margin"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin">
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bordercolor" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:text="How certain are you about the harasser ?"
+                        android:text="Would you like to make your report public ?"
                         android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="32dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:orientation="horizontal"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
                         android:weightSum="2">
 
-                        <RadioButton
-                            android:id="@+id/radioButtonverycertain"
-                            android:layout_width="wrap_content"
+                        <Button
+                            android:id="@+id/radioButtonMe"
+                            android:layout_width="40dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Very Certain"
-                            android:checked="false"
-
-
+                            android:layout_marginRight="4dp"
+                            android:text="YES"
+                            android:background="#F1F1F1"
                             android:textSize="16sp" />
 
-                        <RadioButton
-                            android:id="@+id/radioButtonuncertain"
-                            android:layout_width="wrap_content"
+                        <Button
+                            android:id="@+id/radioButtonSomeoneIknow"
+                            android:layout_width="40dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Uncertain"
-                            android:checked="false"
+                            android:text="NO"
+                            android:background="#F1F1F1"
 
+                            android:checked="false"
                             android:textSize="16sp" />
 
 
                     </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/bordercolor" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="How Certain are you about the harrasser?"
+                        android:textSize="16sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/thumb"
+                        android:progressDrawable="@drawable/progress"
+                        android:layout_marginTop="24dp" />
                 </LinearLayout>
 
                 <TextView
@@ -350,46 +270,26 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Would you like to make your report public ?"
+                        android:text="Please add anymore details if available:"
                         android:textSize="16sp" />
 
-                    <LinearLayout
+                    <EditText
+                        android:id="@+id/editTextSummarize"
                         android:layout_width="match_parent"
-                        android:layout_height="32dp"
+                        android:layout_height="100dp"
                         android:layout_marginTop="16dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
-
-                        <RadioButton
-                            android:id="@+id/radioButtonpublic"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Yes"
-                            android:checked="false"
-
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/radioButtonunnonpublic"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="No"
-                            android:checked="false"
-
-                            android:textSize="16sp" />
-
-
-                    </LinearLayout>
+                        android:background="@drawable/border"
+                        android:hint=" Write here.."
+                        android:textSize="16sp" />
                 </LinearLayout>
+
 
                 <Button
                     android:id="@+id/buttonsubmit"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_margin="@dimen/activity_vertical_margin"
-                    android:background="@color/buttonback"
+                    android:background="@color/purple"
                     android:text="SUBMIT"
                     android:textColor="#ffffff"
                     android:textSize="16sp" />

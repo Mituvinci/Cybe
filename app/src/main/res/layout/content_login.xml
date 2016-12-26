@@ -15,14 +15,7 @@
     tools:showIn="@layout/activity_login">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:textColor="#455A64"
-        android:text="You must be Logged in to Report or Check Our News Feeds"
-        android:textSize="18sp"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +44,7 @@
         <FrameLayout
             android:id="@+id/FrameLayout1"
             android:layout_width="240dp"
-            android:layout_height="40dp"
+            android:layout_height="24dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="bottom">
 
@@ -80,4 +73,22 @@
         android:text="Login with facebook"
         android:layout_gravity="center"
         android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/registeremailBtn"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/FrameLayout1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/FrameLayout1"
+        android:layout_weight="0.00"
+        android:background="@drawable/gray_background"
+        android:drawablePadding="-23dp"
+        android:layout_marginTop="24dp"
+        android:text="REGISTER WITH EMAIL"
+        android:layout_gravity="center"
+        android:textColor="#ffffff" />
+
+
+
 </LinearLayout>

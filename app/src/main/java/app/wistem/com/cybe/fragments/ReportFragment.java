@@ -5,30 +5,24 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.List;
 
 import app.wistem.com.cybe.R;
-import app.wistem.com.cybe.adapters.ScareScoreAdapter;
 import app.wistem.com.cybe.utilities.StoreReportSharedPreferenc;
 
 
@@ -43,19 +37,16 @@ public class ReportFragment extends Fragment {
     private static String mScareScorePosition = "1";
     private Button mButtonSubmit;
 
-    private RadioButton mRadioButtonMe;
-    private RadioButton mRadioButtonSomeOneElse;
-    private RadioButton mRadioButtonVerCertain;
-    private RadioButton mRadioButtonUncertain;
-    private RadioButton mRadioButtonYes;
-    private RadioButton mRadioButtonNo;
+    private Button ButtonYesPublic;
+    private Button ButtonNoPublic;
+
 
     private EditText mEditTextSummarize;
-    private EditText mEditTextMoreDetails;
 
     private TextView mTextViewAudio;
     private TextView mTextViewVideo;
     private TextView mTextViewImage;
+    private SeekBar mSeekBar;
 
     private  String mScarePerson;
     private  String mCertainty;
@@ -69,7 +60,7 @@ public class ReportFragment extends Fragment {
 
 
 
-    private TextView mTextViewScore;
+    //private TextView mTextViewScore;
     public ReportFragment() {
         // Required empty public constructor
     }
@@ -81,18 +72,14 @@ public class ReportFragment extends Fragment {
         // Inflate the layout for this fragment
         View  view = inflater.inflate(R.layout.fragment_report, container, false);
         mSessionManager = new StoreReportSharedPreferenc(getActivity());
-        mTextViewScore = (TextView) view.findViewById(R.id.textViewScoreit);
+       // mTextViewScore = (TextView) view.findViewById(R.id.textViewScoreit);
+        mSeekBar = (SeekBar) view.findViewById(R.id.seekBar1);
         mButtonSubmit = (Button) view.findViewById(R.id.buttonsubmit);
 
-        mRadioButtonMe = (RadioButton) view.findViewById(R.id.radioButtonMe);
-        mRadioButtonSomeOneElse = (RadioButton) view.findViewById(R.id.radioButtonSomeoneIknow);;
-        mRadioButtonVerCertain = (RadioButton) view.findViewById(R.id.radioButtonverycertain);;
-        mRadioButtonUncertain = (RadioButton) view.findViewById(R.id.radioButtonuncertain);;
-        mRadioButtonYes = (RadioButton) view.findViewById(R.id.radioButtonpublic);;
-        mRadioButtonNo = (RadioButton) view.findViewById(R.id.radioButtonunnonpublic);;
+        ButtonYesPublic = (Button) view.findViewById(R.id.radioButtonMe);
+        ButtonNoPublic = (Button) view.findViewById(R.id.radioButtonSomeoneIknow);;
 
         mEditTextSummarize = (EditText) view.findViewById(R.id.editTextSummarize);
-        mEditTextMoreDetails = (EditText) view.findViewById(R.id.edittextMoredetails);
         mTextViewAudio = (TextView) view.findViewById(R.id.textViewAudio);
         mTextViewVideo = (TextView) view.findViewById(R.id.textViewVideo);
         mTextViewImage = (TextView) view.findViewById(R.id.textViewImage);
@@ -101,61 +88,33 @@ public class ReportFragment extends Fragment {
 
         fileFetch();
 
-        mRadioButtonMe.setOnClickListener(new View.OnClickListener() {
+        ButtonYesPublic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mRadioButtonSomeOneElse.setChecked(false);
-                mRadioButtonMe.setChecked(true);
-                mScarePerson = "ME";
+                ButtonNoPublic.setBackgroundColor(Color.parseColor("#F1F1F1"));
+                ButtonYesPublic.setBackgroundColor(Color.parseColor("#29AAF1"));
+                ButtonYesPublic.setTextColor(Color.parseColor("#F1F1F1"));
+                ButtonNoPublic.setTextColor(Color.parseColor("#000000"));
+
+                mScarePerson = "YES";
             }
         });
 
 
-        mRadioButtonSomeOneElse.setOnClickListener(new View.OnClickListener() {
+        ButtonNoPublic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mRadioButtonSomeOneElse.setChecked(true);
-                mRadioButtonMe.setChecked(false);
-                mScarePerson = "Some one I know";
+                ButtonNoPublic.setBackgroundColor(Color.parseColor("#29AAF1"));
+                ButtonNoPublic.setTextColor(Color.parseColor("#F1F1F1"));
+                ButtonYesPublic.setTextColor(Color.parseColor("#000000"));
+                ButtonYesPublic.setBackgroundColor(Color.parseColor("#F1F1F1"));
+                mScarePerson = "NO";
 
             }
         });
 
 
-        mRadioButtonVerCertain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mRadioButtonVerCertain.setChecked(true);
-                mRadioButtonUncertain.setChecked(false);
-                mCertainty = "Very Certain";
-            }
-        });
 
-        mRadioButtonUncertain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mRadioButtonVerCertain.setChecked(false);
-                mRadioButtonUncertain.setChecked(true);
-                mCertainty = " Uncertain";
-
-            }
-        });
-        mRadioButtonYes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mRadioButtonYes.setChecked(true);
-                mRadioButtonNo.setChecked(false);
-                mPublicNot = "YES";
-            }
-        });
-        mRadioButtonNo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mRadioButtonYes.setChecked(false);
-                mRadioButtonNo.setChecked(true);
-                mPublicNot = "No";
-            }
-        });
 
 
         return  view;
@@ -211,7 +170,7 @@ public class ReportFragment extends Fragment {
             public void onClick(View v) {
 
                 mSummarize = mEditTextSummarize.getText().toString();
-                mMoreDetails = mEditTextMoreDetails.getText().toString();
+               // mMoreDetails = mEditTextMoreDetails.getText().toString();
 
                     View view = getActivity().getCurrentFocus();
                     if (view != null) {
@@ -239,60 +198,23 @@ public class ReportFragment extends Fragment {
         });
     }
     private  void  scareScore(){
-        mTextViewScore.setOnClickListener(new View.OnClickListener() {
+        mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onClick(View v) {
-                LayoutInflater li = LayoutInflater.from(getActivity());
-                View promptsView = li.inflate(R.layout.choose_dialog_scare_score_layout, null);
-                TextView textView;
-                textView = (TextView) promptsView.findViewById(R.id.titleactivity);
-                textView.setText("Score how much scared you are");
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                        getActivity());
-                alertDialogBuilder.setView(promptsView);
-                final RecyclerView mRecyclerViewchooseDialog;
-                final RecyclerView.LayoutManager mLayoutManagerChoosDialog;
-                ScareScoreAdapter mAdapterChoosDialog;
-                mRecyclerViewchooseDialog = (RecyclerView) promptsView.findViewById(R.id.districtchoose);
-                mLayoutManagerChoosDialog = new LinearLayoutManager(getActivity());
-                mRecyclerViewchooseDialog.setHasFixedSize(true);
-                mRecyclerViewchooseDialog.setLayoutManager(mLayoutManagerChoosDialog);
-                mAdapterChoosDialog = new ScareScoreAdapter(Arrays.asList(mScore),getActivity(),mScareScorePosition);
-                mRecyclerViewchooseDialog.setAdapter(mAdapterChoosDialog);
-                mRecyclerViewchooseDialog.setNestedScrollingEnabled(false);
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                Log.d("seekbar", "onProgressChanged: "+i);
 
-                // set dialog message
-                alertDialogBuilder
-                        .setCancelable(false)
-                        .setPositiveButton("Save",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        // get user input and set it to result
-                                        SharedPreferences prefschck = PreferenceManager.getDefaultSharedPreferences(getActivity());
-                                        int knowingrposition = prefschck.getInt(KNOWING_POSITION,-1);
-                                        prefschck.edit().clear().apply();
-                                        if(knowingrposition != -1) {
-                                            mScareScorePosition = mScore[knowingrposition];
-                                            mScoreNumber = mScareScorePosition;
-                                            mTextViewScore.setText(mScareScorePosition +" out of 10");
+            }
 
-                                        }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
 
-                                    }
-                                })
-                        .setNegativeButton("Cance",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        dialog.cancel();
-                                    }
-                                });
+            }
 
-                // create alert dialog
-                AlertDialog alertDialog = alertDialogBuilder.create();
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
 
-                // show it
-                alertDialog.show();
             }
         });
+
     }
 }

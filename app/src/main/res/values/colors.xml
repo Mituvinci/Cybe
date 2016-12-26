@@ -10,4 +10,6 @@
     <color name="black">#000000</color>
     <color name="backgroun_assh_color">#B8CCE1</color>
     <color name="purple">#3F4274</color>
+    <color name="text_color">#7892AB</color>
+
 </resources>
