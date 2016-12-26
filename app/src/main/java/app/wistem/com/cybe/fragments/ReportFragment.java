@@ -48,12 +48,9 @@ public class ReportFragment extends Fragment {
     private TextView mTextViewImage;
     private SeekBar mSeekBar;
 
-    private  String mScarePerson;
-    private  String mCertainty;
     private  String mPublicNot;
-    private  String mScoreNumber;
     private  String mSummarize ="";
-    private  String mMoreDetails = "";
+    private String mScareScore;
 
     private StoreReportSharedPreferenc mSessionManager;
     private List<File> image;
@@ -96,7 +93,7 @@ public class ReportFragment extends Fragment {
                 ButtonYesPublic.setTextColor(Color.parseColor("#F1F1F1"));
                 ButtonNoPublic.setTextColor(Color.parseColor("#000000"));
 
-                mScarePerson = "YES";
+                mPublicNot = "YES";
             }
         });
 
@@ -108,7 +105,7 @@ public class ReportFragment extends Fragment {
                 ButtonNoPublic.setTextColor(Color.parseColor("#F1F1F1"));
                 ButtonYesPublic.setTextColor(Color.parseColor("#000000"));
                 ButtonYesPublic.setBackgroundColor(Color.parseColor("#F1F1F1"));
-                mScarePerson = "NO";
+                mPublicNot = "NO";
 
             }
         });
@@ -177,9 +174,9 @@ public class ReportFragment extends Fragment {
                         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
                     }
-                    mSessionManager.storeUserInformation(mScarePerson,mScoreNumber,mSummarize,mMoreDetails,mCertainty,mPublicNot);
+                    mSessionManager.storeUserInformation(mPublicNot,mScareScore,mSummarize);
 
-                    // Log.d("report", "onClick: "+mScarePerson+" ,"+mScoreNumber+" , "+mSummarize+" ,"+mMoreDetails+" , "+mCertainty+" ,"+mPublicNot);
+                    // Log.d("report", "onClick: "+mPublicNot+" ,"+mScoreNumber+" , "+mSummarize+" ,"+mMoreDetails+" , "+mCertainty+" ,"+mPublicNot);
 
                 if (!TextUtils.isEmpty(mPublicNot)) {
                     FragmentManager fm = getActivity().getFragmentManager();
@@ -202,6 +199,7 @@ public class ReportFragment extends Fragment {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 Log.d("seekbar", "onProgressChanged: "+i);
+                mScareScore = String.valueOf(i)+" %";
 
             }
 

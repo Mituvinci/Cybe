@@ -19,11 +19,7 @@ public class StoreReportSharedPreferenc {
     public static final String HARASSED = "harassed";
     public static final String SCARE_SCORE = "scarescore";
     public static final String SUMMERIZE = "summerize";
-    public static final String GENDER="gender";
-    public static final String MORE_DETAILS ="moredetails";
-    public static final String HARASSER_CERTAINTY = "harassercertainty";
-    public static final String PUBLIC = "public";
-    ;
+
 
 
 
@@ -34,15 +30,11 @@ public class StoreReportSharedPreferenc {
         mEditor = mPref.edit();
     }
 
-    public void storeUserInformation(String email, String name, String mobile, String address, String districtbangla,
-                                     String districtenglish){
+    public void storeUserInformation(String mPublicNot, String mScareScore, String mSummarize){
 
-        mEditor.putString(HARASSED,email);
-        mEditor.putString(SCARE_SCORE,name);
-        mEditor.putString(SUMMERIZE,mobile);
-        mEditor.putString(MORE_DETAILS,address);
-        mEditor.putString(HARASSER_CERTAINTY,districtbangla);
-        mEditor.putString(PUBLIC,districtenglish);
+        mEditor.putString(HARASSED,mPublicNot);
+        mEditor.putString(SCARE_SCORE,mScareScore);
+        mEditor.putString(SUMMERIZE,mSummarize);
         mEditor.commit();
     }
 
@@ -61,11 +53,6 @@ public class StoreReportSharedPreferenc {
         UserInformation.put(HARASSED, mPref.getString(HARASSED, ""));
         UserInformation.put(SCARE_SCORE, mPref.getString(SCARE_SCORE, ""));
         UserInformation.put(SUMMERIZE, mPref.getString(SUMMERIZE, ""));
-        UserInformation.put(GENDER, mPref.getString(GENDER, ""));
-        UserInformation.put(MORE_DETAILS, mPref.getString(MORE_DETAILS, ""));
-        UserInformation.put(HARASSER_CERTAINTY, mPref.getString(HARASSER_CERTAINTY, ""));
-        UserInformation.put(PUBLIC, mPref.getString(PUBLIC, ""));
-
         return UserInformation;
     }
 
