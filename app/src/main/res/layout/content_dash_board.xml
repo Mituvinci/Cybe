@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:text="Welcome to your dashboard! using this following menu list, you can file a complain and let us help you. your information is secured with us and please do not hesitate to report."
+            android:text="Welcome to your dashboard! using the following menu, you can file a complaint and let us help you. Your information is secure with us."
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="#838383"

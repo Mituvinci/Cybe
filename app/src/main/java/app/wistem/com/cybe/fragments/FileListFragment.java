@@ -1,7 +1,9 @@
 package app.wistem.com.cybe.fragments;
 
 import android.app.Fragment;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +18,7 @@ import app.wistem.com.cybe.R;
 import app.wistem.com.cybe.adapters.FileNameAdapter;
 
 
+@RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
 public class FileListFragment extends Fragment {
 
 
