@@ -128,8 +128,13 @@ public class ReportFragment extends Fragment {
 
                 bundle.putString("file","audio");
                 fragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().addToBackStack(null)
-                        .replace(R.id.main, fragment).commit();
+//
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.containerHome, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
@@ -141,8 +146,14 @@ public class ReportFragment extends Fragment {
 
                 bundle.putString("file","video");
                 fragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().addToBackStack(null)
-                        .replace(R.id.main, fragment).commit();
+              /*  getFragmentManager().beginTransaction().addToBackStack(null)
+                        .replace(R.id.containerHome, fragment).commit();*/
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.containerHome, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
@@ -153,8 +164,13 @@ public class ReportFragment extends Fragment {
 
 
                 Fragment fragment = new ImageFragment();
-                getFragmentManager().beginTransaction().addToBackStack(null)
-                        .replace(R.id.main, fragment).commit();
+//                getFragmentManager().beginTransaction().addToBackStack(null)
+//                        .replace(R.id.containerHome, fragment).commit();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.containerHome, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
             }
         });
 
@@ -181,7 +197,7 @@ public class ReportFragment extends Fragment {
                 if (!TextUtils.isEmpty(mPublicNot)) {
                     FragmentManager fm = getActivity().getFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
-                    ft.replace(R.id.main, new ReportFeedBackFragment());
+                    ft.add(R.id.containerHome, new ReportFeedBackFragment());
                     ft.addToBackStack(null);
                     fm.popBackStackImmediate();
                     ft.commit();

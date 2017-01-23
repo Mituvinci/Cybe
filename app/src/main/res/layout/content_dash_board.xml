@@ -40,60 +40,56 @@
             />
     </LinearLayout>
 
+
     <ScrollView
         android:layout_width="match_parent"
-        android:scrollbars="none"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
 
-            <!--<TextView
-                android:id="@+id/textViewCallList"
-                android:layout_width="match_parent"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_height="50dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Emergency call list"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:background="@drawable/purple_border"
-                android:textStyle="normal"
-                android:textSize="16sp"
+    <GridLayout
+        android:id="@+id/grid_layout_keypad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:columnCount="2"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:rowCount="3"
+        android:rowOrderPreserved="false"
+        android:textAlignment="center"
+        android:scrollIndicators="none"
 
-                />-->
+        >
 
-            <TextView
+
+
+
+            <Button
                 android:id="@+id/textViewnewsEmergencyCallList"
                 android:layout_gravity="center"
-                style="@style/Widget.AppCompat.Button.Colored"
-
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textStyle="normal"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="8dp"
+                android:layout_width="110dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="12dp"
+                android:padding="2dp"
+                android:layout_height="80dp"
                 android:text="Emergency Call List"
                 android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
 
 
-            <TextView
+            <Button
                 android:id="@+id/textViewreport"
-                android:layout_width="match_parent"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_height="50dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_width="110dp"
+                android:padding="2dp"
+                android:layout_marginBottom="12dp"
+                android:layout_height="80dp"
                 android:text="Report Cyber Harassment"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -104,90 +100,71 @@
 
                  />
 
-            <TextView
+            <Button
                 android:id="@+id/textViewnewsEnterForum"
                 android:layout_gravity="center"
-                style="@style/Widget.AppCompat.Button.Colored"
-
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textStyle="normal"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="8dp"
+                android:layout_width="110dp"
+                android:padding="2dp"
+                android:layout_marginBottom="12dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_height="80dp"
                 android:text="Enter Our Forum"
                 android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
 
-            <TextView
-                android:id="@+id/textViewnewsFeed"
-                android:layout_gravity="center"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:textStyle="normal"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Check news Feed"
-                android:background="@drawable/purple_border"
-                android:textSize="16sp"
-                />
 
-
-
-
-
-
-            <TextView
+        <Button
                 android:id="@+id/textViewnotificationSetting"
                 android:layout_gravity="center"
-                style="@style/Widget.AppCompat.Button.Colored"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textStyle="normal"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_width="110dp"
+                android:padding="2dp"
+                android:layout_marginBottom="12dp"
+                android:layout_height="80dp"
                 android:text="Notification and Settings"
                 android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
 
 
-            <TextView
+            <Button
                 android:id="@+id/textViewVisitFaceBook"
                 android:layout_gravity="center"
-                style="@style/Widget.AppCompat.Button.Colored"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textStyle="normal"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="8dp"
+                android:layout_width="110dp"
+                android:padding="4dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_height="80dp"
                 android:text="Visit facebook page"
                 android:background="@drawable/purple_border"
                 android:textSize="16sp"
                 />
 
+        <Button
+            android:id="@+id/textViewnewsFeed"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:layout_width="110dp"
+            android:padding="2dp"
+            android:layout_height="80dp"
+            android:text="Check news Feed"
+            android:background="@drawable/purple_border"
+            android:textSize="16sp"
+            />
 
 
+    </GridLayout>
 
-
-
-
-
-        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>
