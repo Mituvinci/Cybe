@@ -42,7 +42,7 @@ public class DashBoardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.testing_layout, container, false);
+        View view = inflater.inflate(R.layout.dashboard_testing_layout, container, false);
 
         mTextViewReport = (ImageView) view.findViewById(R.id.textViewreport);
         mTextViewNewsFeed = (ImageView) view.findViewById(R.id.textViewnewsFeed);

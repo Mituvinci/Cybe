@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="#6EABD7"
     tools:context="app.wistem.com.cybe.DashBoardFragment">
-    <include layout="@layout/testing_layout" />
+    <include layout="@layout/dashboard_testing_layout" />
 
 
 </LinearLayout>
