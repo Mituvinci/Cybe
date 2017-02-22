@@ -35,6 +35,8 @@
                         android:id="@+id/main_toolbar_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@style/CodeFont"
+
                         android:text="CYBE"
                         android:textSize="25sp"/>
 
@@ -50,6 +52,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="your personal assistant 24/7"
+                    android:textAppearance="@style/CodeFont"
+
                     android:textColor="#9EA09B"
                     android:textSize="18sp"
                     android:textStyle="italic"
@@ -68,6 +72,8 @@
                 android:layout_height="wrap_content"
                 android:text="NEWS FEED"
                 android:textColor="#ffffff"
+                android:textAppearance="@style/CodeFont"
+
                 android:textSize="18sp"
                 android:textStyle="bold"
                 />
@@ -84,6 +90,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAppearance="@style/CodeFont"
+
                 android:text= "@string/thank_latter"/>
 
             <TextView
@@ -95,6 +103,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="left"
+                android:textAppearance="@style/CodeFont"
+
                 android:text="FEED OF THE DAY"
                 android:textColor="@color/white"
                 />
@@ -106,6 +116,8 @@
                 android:background="#878787"
                 android:layout_gravity="center"
                 android:gravity="left"
+                android:textAppearance="@style/CodeFont"
+
                 android:text="TOP ARTICLES"
                 android:textColor="@color/white"
                 />

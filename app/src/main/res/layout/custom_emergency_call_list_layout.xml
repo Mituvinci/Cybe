@@ -20,6 +20,8 @@
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="32dp"
+            android:textAppearance="@style/CodeFont"
+
             android:gravity="center"
             android:text="Area Name"
             android:id="@+id/textViewareaId"
@@ -34,6 +36,7 @@
             android:layout_marginRight="32dp"
             android:layout_marginLeft="32dp"
             android:gravity="center"
+            android:textAppearance="@style/CodeFont"
             android:paddingLeft="8dp"
             android:text="485454"
             android:textColor="@color/background"

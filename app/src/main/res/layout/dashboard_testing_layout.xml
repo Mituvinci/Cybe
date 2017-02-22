@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:textAppearance="@style/CodeFont"
             android:text="Welcome to your dashboard! using the following menu, you can file a complaint and let us help you. Your information is secure with us."
             android:layout_gravity="center"
             android:gravity="center"
@@ -59,7 +60,7 @@
                 android:weightSum="2"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_marginBottom="4dp"
+                android:layout_marginBottom="12dp"
                 >
 
                     <LinearLayout
@@ -78,6 +79,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textAppearance="@style/CodeFont"
                             android:text="Emergency \nCall List"
                             android:layout_gravity="center"
                             android:gravity="center"
@@ -101,6 +103,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textAppearance="@style/CodeFont"
                             android:text="Report Cyber\n Harassment"
                             android:layout_gravity="center"
                             android:gravity="center"
@@ -112,6 +115,70 @@
 
 
 
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="12dp"
+
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/forum"
+                        android:id="@+id/textViewnewsEnterForum"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CodeFont"
+                        android:text="Enter Our\n Forum"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/purple"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/textViewnotificationSetting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/notifications"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/CodeFont"
+                        android:text="Notification and\n Settings"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/purple"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -134,80 +201,23 @@
                     android:layout_gravity="center"
                     android:gravity="center">
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/forum"
-                        android:id="@+id/textViewnewsEnterForum"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Enter Our\n Forum"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textColor="@color/purple"
-                        android:layout_margin="2dp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:gravity="center">
-                    <ImageView
-                        android:id="@+id/textViewnotificationSetting"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/notifications"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Notification and\n Settings"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textColor="@color/purple"
-                        android:layout_margin="2dp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:weightSum="2"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginBottom="8dp"
-
-
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:gravity="center">
-                    <ImageView
                         android:id="@+id/textViewVisitFaceBook"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/facebook"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@style/CodeFont"
                         android:text="Visit \nfacebook page"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="@color/purple"
                         android:layout_margin="2dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:id="@+id/textView" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -222,15 +232,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/news_feed"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@style/CodeFont"
                         android:text="Check \nnews Feed"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="@color/purple"
                         android:layout_margin="2dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:id="@+id/textView2" />
                 </LinearLayout>
 
             </LinearLayout>

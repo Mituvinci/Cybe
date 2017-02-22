@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import app.wistem.com.cybe.fragments.EmergencyCallListFragment;
 import app.wistem.com.cybe.fragments.NewsFeedFragment;
@@ -31,6 +32,7 @@ public class DashBoardFragment extends Fragment {
     private ImageView mTextViewEnterOurForum;
     private ImageView mTextViewVisitFaceBookpage;
     private ImageView mTextViewNotificationSetting;
+    private TextView mTextViewSplash;
     private SessionManager mSessionManager;
 
     public DashBoardFragment() {
@@ -43,7 +45,7 @@ public class DashBoardFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.dashboard_testing_layout, container, false);
-
+        mTextViewSplash = (TextView) view.findViewById(R.id.textViewsplash);
         mTextViewReport = (ImageView) view.findViewById(R.id.textViewreport);
         mTextViewNewsFeed = (ImageView) view.findViewById(R.id.textViewnewsFeed);
         mTextViewEmergencyCallList = (ImageView)view.findViewById(R.id.textViewnewsEmergencyCallList);
@@ -54,6 +56,14 @@ public class DashBoardFragment extends Fragment {
 
 
         mSessionManager = new SessionManager(getActivity());
+       // mTextViewSplash.setVisibility(View.VISIBLE);
+
+        mTextViewSplash.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mTextViewSplash.setVisibility(View.GONE);
+            }
+        },4000);
         report();
         newsfeed();
         emergencyCallList();

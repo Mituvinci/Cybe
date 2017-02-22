@@ -35,6 +35,8 @@
                         android:id="@+id/main_toolbar_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@style/CodeFont"
+
                         android:text="CYBE"
                         android:textSize="25sp"/>
 
@@ -49,6 +51,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAppearance="@style/CodeFont"
+
                     android:text="your personal assistant 24/7"
                     android:textColor="#9EA09B"
                     android:textSize="18sp"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashBoard"
+            android:icon="@drawable/ic_menu_camera"
+            android:textAppearance="@style/CodeFont"
+            android:title="Dash Board" />
+        <item
+            android:id="@+id/nav_emergencyCallList"
+            android:icon="@drawable/ic_menu_gallery"
+            android:textAppearance="@style/CodeFont"
+            android:title="Emergency Call List" />
+        <item
+            android:id="@+id/nav_reportCyberHarrasment"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:textAppearance="@style/CodeFont"
+            android:title="Report Cyber Harassment" />
+        <item
+            android:id="@+id/nav_notificationSettings"
+            android:icon="@drawable/ic_menu_manage"
+            android:textAppearance="@style/CodeFont"
+            android:title="Notifications and Settings" />
+    </group>
+
+
+
+</menu>

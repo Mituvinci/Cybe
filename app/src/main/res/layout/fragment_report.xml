@@ -20,6 +20,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAppearance="@style/CodeFont"
+
                 android:text="REPORT CRIME"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
@@ -62,6 +64,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@style/CodeFont"
+
                         android:text="Attach Evidence:"
                         android:textSize="16sp" />
 
@@ -76,6 +80,8 @@
                             android:layout_height="32dp"
                             android:layout_marginLeft="3dp"
                             android:layout_marginTop="16dp"
+                            android:textAppearance="@style/CodeFont"
+
                             android:layout_weight="1"
                             android:text="Audio"
                             android:id="@+id/textViewAudio"
@@ -87,6 +93,8 @@
                             android:layout_height="32dp"
                             android:layout_marginLeft="3dp"
                             android:layout_marginTop="16dp"
+                            android:textAppearance="@style/CodeFont"
+
                             android:layout_weight="1"
                             android:text="Video"
                             android:id="@+id/textViewVideo"
@@ -98,6 +106,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_marginTop="16dp"
+                            android:textAppearance="@style/CodeFont"
+
                             android:layout_weight="1"
                             android:text="Image"
                             android:textColor="#000000"
@@ -108,6 +118,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_marginTop="16dp"
+                            android:textAppearance="@style/CodeFont"
+
                             android:layout_weight="1"
                             android:text="Camera"
                             android:id="@+id/textViewLink"
@@ -129,6 +141,8 @@
                         android:layout_height="1dp"
                         android:layout_marginBottom="16dp"
                         android:layout_marginTop="8dp"
+                        android:textAppearance="@style/CodeFont"
+
                         android:background="@color/bordercolor" />
 
                     <TextView
@@ -136,6 +150,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
+                        android:textAppearance="@style/CodeFont"
+
                         android:text="Would you like to make your report public ?"
                         android:textSize="16sp" />
 
@@ -154,6 +170,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_marginRight="4dp"
+                            android:textAppearance="@style/CodeFont"
+
                             android:text="YES"
                             android:background="#F1F1F1"
                             android:textSize="16sp" />
@@ -163,6 +181,8 @@
                             android:layout_width="40dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:textAppearance="@style/CodeFont"
+
                             android:text="NO"
                             android:background="#F1F1F1"
 
@@ -179,6 +199,8 @@
                     android:layout_height="1dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
+                    android:textAppearance="@style/CodeFont"
+
                     android:background="@color/bordercolor" />
 
 
@@ -194,6 +216,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@style/CodeFont"
+
                         android:text="How Certain are you about the harrasser?"
                         android:textSize="16sp" />
 
@@ -211,6 +235,8 @@
                     android:layout_height="1dp"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="8dp"
+                    android:textAppearance="@style/CodeFont"
+
                     android:background="@color/bordercolor" />
 
                 <LinearLayout
@@ -224,6 +250,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textAppearance="@style/CodeFont"
+
                         android:text="Please add anymore details if available:"
                         android:textSize="16sp" />
 
@@ -233,6 +261,8 @@
                         android:layout_height="100dp"
                         android:layout_marginTop="16dp"
                         android:background="@drawable/border"
+                        android:textAppearance="@style/CodeFont"
+
                         android:hint=" Write here.."
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -245,6 +275,8 @@
                     android:layout_margin="@dimen/activity_vertical_margin"
                     android:background="@color/purple"
                     android:text="SUBMIT"
+                    android:textAppearance="@style/CodeFont"
+
                     android:textColor="#ffffff"
                     android:textSize="16sp" />
 

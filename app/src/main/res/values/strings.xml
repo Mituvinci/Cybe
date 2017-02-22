@@ -8,4 +8,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dummy_news_feed">Land rights offer a key way to economically empower women, giving them the confidence they need to tackle gender inequalities.</string>
     <string name="thank_latter">Thank you for your report. Our support Team will contact you ASAP.</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
