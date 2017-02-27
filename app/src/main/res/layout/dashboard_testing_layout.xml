@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp">
+
         <TextView
             android:id="@+id/textViewsplash"
             android:layout_width="match_parent"
@@ -28,7 +29,7 @@
             android:text="Welcome to your dashboard! using the following menu, you can file a complaint and let us help you. Your information is secure with us."
             android:layout_gravity="center"
             android:gravity="center"
-            android:textColor="#838383"
+            android:textColor="@color/purple"
             android:background="@drawable/border_white"
             android:textStyle="bold"
             android:textSize="14sp"
@@ -42,15 +43,16 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="32dp"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:weightSum="3">
 
             <LinearLayout
@@ -75,7 +77,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/textViewnewsEmergencyCallList"
-                            android:background="@drawable/emergency_phonelist"/>
+                            android:background="@drawable/emergenctcalllist"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -85,6 +87,7 @@
                             android:gravity="center"
                             android:textColor="@color/purple"
                             android:layout_margin="2dp"
+                            android:textSize="12sp"
                             android:textStyle="bold"/>
                     </LinearLayout>
 
@@ -99,7 +102,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/textViewreport"
-                            android:background="@drawable/report_harrasment"/>
+                            android:background="@drawable/filereport"/>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -109,7 +113,10 @@
                             android:gravity="center"
                             android:textColor="@color/purple"
                             android:layout_margin="2dp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+
+                            android:id="@+id/textView3" />
                     </LinearLayout>
 
 
@@ -139,7 +146,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/forum"
+                        android:background="@drawable/enterforum"
                         android:id="@+id/textViewnewsEnterForum"
                         />
                     <TextView
@@ -151,6 +158,7 @@
                         android:gravity="center"
                         android:textColor="@color/purple"
                         android:layout_margin="2dp"
+                        android:textSize="12sp"
                         android:textStyle="bold"/>
                 </LinearLayout>
 
@@ -166,7 +174,7 @@
                         android:id="@+id/textViewnotificationSetting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/notifications"/>
+                        android:background="@drawable/settings"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -177,6 +185,7 @@
                         android:gravity="center"
                         android:textColor="@color/purple"
                         android:layout_margin="2dp"
+                        android:textSize="12sp"
                         android:textStyle="bold"/>
                 </LinearLayout>
 
@@ -205,7 +214,7 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/facebook"/>
+                        android:background="@drawable/facebooklogobutton"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -216,6 +225,8 @@
                         android:gravity="center"
                         android:textColor="@color/purple"
                         android:layout_margin="2dp"
+                        android:textSize="12sp"
+
                         android:textStyle="bold"
                         android:id="@+id/textView" />
                 </LinearLayout>
@@ -231,7 +242,7 @@
                         android:id="@+id/textViewnewsFeed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/news_feed"/>
+                        android:background="@drawable/checknewsfeed"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -243,6 +254,7 @@
                         android:textColor="@color/purple"
                         android:layout_margin="2dp"
                         android:textStyle="bold"
+                        android:textSize="12sp"
                         android:id="@+id/textView2" />
                 </LinearLayout>
 

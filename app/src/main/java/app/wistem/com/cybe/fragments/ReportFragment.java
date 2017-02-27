@@ -117,8 +117,8 @@ public class ReportFragment extends Fragment  implements  View.OnClickListener{
         ButtonYesPublic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ButtonNoPublic.setBackgroundColor(Color.parseColor("#F1F1F1"));
-                ButtonYesPublic.setBackgroundColor(Color.parseColor("#29AAF1"));
+                ButtonNoPublic.setBackgroundColor(Color.parseColor("#BDBDBD"));
+                ButtonYesPublic.setBackgroundColor(Color.parseColor("#4650A3"));
                 ButtonYesPublic.setTextColor(Color.parseColor("#F1F1F1"));
                 ButtonNoPublic.setTextColor(Color.parseColor("#000000"));
 
@@ -130,10 +130,10 @@ public class ReportFragment extends Fragment  implements  View.OnClickListener{
         ButtonNoPublic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ButtonNoPublic.setBackgroundColor(Color.parseColor("#29AAF1"));
+                ButtonNoPublic.setBackgroundColor(Color.parseColor("#4650A3"));
                 ButtonNoPublic.setTextColor(Color.parseColor("#F1F1F1"));
                 ButtonYesPublic.setTextColor(Color.parseColor("#000000"));
-                ButtonYesPublic.setBackgroundColor(Color.parseColor("#F1F1F1"));
+                ButtonYesPublic.setBackgroundColor(Color.parseColor("#BDBDBD"));
                 mPublicNot = "NO";
 
             }

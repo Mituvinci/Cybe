@@ -14,7 +14,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#6EABD7"
             android:layout_gravity="center"
             android:gravity="center">
             <TextView
@@ -23,7 +22,7 @@
                 android:textAppearance="@style/CodeFont"
 
                 android:text="REPORT CRIME"
-                android:textColor="#ffffff"
+                android:textColor="@color/purple"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 />
@@ -65,7 +64,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/CodeFont"
-
+                        android:textColor="@color/purple"
                         android:text="Attach Evidence:"
                         android:textSize="16sp" />
 
@@ -81,11 +80,10 @@
                             android:layout_marginLeft="3dp"
                             android:layout_marginTop="16dp"
                             android:textAppearance="@style/CodeFont"
-
+                            android:textColor="@color/purple"
                             android:layout_weight="1"
                             android:text="Audio"
                             android:id="@+id/textViewAudio"
-                            android:textColor="#000000"
                             android:textSize="16sp" />
 
                         <TextView
@@ -98,7 +96,7 @@
                             android:layout_weight="1"
                             android:text="Video"
                             android:id="@+id/textViewVideo"
-                            android:textColor="#000000"
+                            android:textColor="@color/purple"
 
                             android:textSize="16sp" />
 
@@ -110,7 +108,7 @@
 
                             android:layout_weight="1"
                             android:text="Image"
-                            android:textColor="#000000"
+                            android:textColor="@color/purple"
                             android:id="@+id/textViewImage"
                             android:textSize="16sp" />
 
@@ -123,7 +121,7 @@
                             android:layout_weight="1"
                             android:text="Camera"
                             android:id="@+id/textViewLink"
-                            android:textColor="#000000"
+                            android:textColor="@color/purple"
                             android:textSize="16sp" />
                     </LinearLayout>
 
@@ -151,6 +149,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textAppearance="@style/CodeFont"
+                        android:textColor="@color/purple"
 
                         android:text="Would you like to make your report public ?"
                         android:textSize="16sp" />
@@ -173,7 +172,8 @@
                             android:textAppearance="@style/CodeFont"
 
                             android:text="YES"
-                            android:background="#F1F1F1"
+                            android:textColor="@color/purple"
+                            android:background="@color/bordercolor"
                             android:textSize="16sp" />
 
                         <Button
@@ -182,10 +182,10 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:textAppearance="@style/CodeFont"
+                            android:textColor="@color/purple"
 
                             android:text="NO"
-                            android:background="#F1F1F1"
-
+                            android:background="@color/bordercolor"
                             android:checked="false"
                             android:textSize="16sp" />
 
@@ -217,6 +217,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/CodeFont"
+                        android:textColor="@color/purple"
 
                         android:text="How Certain are you about the harrasser?"
                         android:textSize="16sp" />
@@ -251,6 +252,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/CodeFont"
+                        android:textColor="@color/purple"
 
                         android:text="Please add anymore details if available:"
                         android:textSize="16sp" />
@@ -262,7 +264,7 @@
                         android:layout_marginTop="16dp"
                         android:background="@drawable/border"
                         android:textAppearance="@style/CodeFont"
-
+                        android:textColor="@color/purple"
                         android:hint=" Write here.."
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -273,7 +275,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_margin="@dimen/activity_vertical_margin"
-                    android:background="@color/purple"
+                    android:background="#4650A3"
                     android:text="SUBMIT"
                     android:textAppearance="@style/CodeFont"
 

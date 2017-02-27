@@ -6,10 +6,10 @@ android:shape="rectangle">
 <corners
     android:radius="2dp"
     />
-<solid android:color="#EFEDF0"
+<solid android:color="@color/bordercolor"
 
     />
 <stroke
     android:width="1dip"
-    android:color="#EFEDF0" />
+    android:color="@color/bordercolor" />
 </shape>

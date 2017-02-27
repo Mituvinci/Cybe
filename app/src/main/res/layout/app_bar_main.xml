@@ -36,26 +36,18 @@
                     android:textAppearance="@style/CodeFont"
                     android:text="CYBE"
                     android:textSize="25sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/CodeFont"
+                    android:text="your personal assistant 24/7"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    />
 
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#E5E5E5"
-            android:layout_gravity="center"
-            android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/CodeFont"
-                android:text="your personal assistant 24/7"
-                android:textColor="#9EA09B"
-                android:textSize="18sp"
-                android:textStyle="italic"
-                android:padding="8dp"
-                />
-        </LinearLayout>
+
 
 
 
