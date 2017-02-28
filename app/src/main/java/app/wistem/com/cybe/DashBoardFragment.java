@@ -11,7 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.LinearLayout;
 
 import app.wistem.com.cybe.fragments.EmergencyCallListFragment;
 import app.wistem.com.cybe.fragments.NewsFeedFragment;
@@ -32,7 +32,7 @@ public class DashBoardFragment extends Fragment {
     private ImageView mTextViewEnterOurForum;
     private ImageView mTextViewVisitFaceBookpage;
     private ImageView mTextViewNotificationSetting;
-    private TextView mTextViewSplash;
+    private LinearLayout mLinearLayoutSplash;
     private SessionManager mSessionManager;
 
     public DashBoardFragment() {
@@ -45,7 +45,7 @@ public class DashBoardFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.dashboard_testing_layout, container, false);
-        mTextViewSplash = (TextView) view.findViewById(R.id.textViewsplash);
+        mLinearLayoutSplash = (LinearLayout) view.findViewById(R.id.linearlayoutsplash);
         mTextViewReport = (ImageView) view.findViewById(R.id.textViewreport);
         mTextViewNewsFeed = (ImageView) view.findViewById(R.id.textViewnewsFeed);
         mTextViewEmergencyCallList = (ImageView)view.findViewById(R.id.textViewnewsEmergencyCallList);
@@ -56,12 +56,12 @@ public class DashBoardFragment extends Fragment {
 
 
         mSessionManager = new SessionManager(getActivity());
-       // mTextViewSplash.setVisibility(View.VISIBLE);
+       // mLinearLayoutSplash.setVisibility(View.VISIBLE);
 
-        mTextViewSplash.postDelayed(new Runnable() {
+        mLinearLayoutSplash.postDelayed(new Runnable() {
             @Override
             public void run() {
-                mTextViewSplash.setVisibility(View.GONE);
+                mLinearLayoutSplash.setVisibility(View.GONE);
             }
         },4000);
         report();

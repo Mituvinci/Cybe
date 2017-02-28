@@ -6,9 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:background="#B8CCE1"
+    android:background="#F1F1F1"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="app.wistem.com.cybe.DashBoardActivity"
    >
@@ -16,10 +18,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/linearlayoutsplash"
         android:layout_marginTop="16dp">
 
         <TextView
-            android:id="@+id/textViewsplash"
             android:layout_width="match_parent"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_height="wrap_content"
@@ -33,7 +35,6 @@
             android:background="@drawable/border_white"
             android:textStyle="bold"
             android:textSize="14sp"
-            android:layout_marginBottom="4dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
 
@@ -43,16 +44,14 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_marginTop="36dp"
             android:weightSum="3">
 
             <LinearLayout
