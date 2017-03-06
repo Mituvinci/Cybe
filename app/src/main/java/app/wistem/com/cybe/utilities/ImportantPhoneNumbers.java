@@ -18,10 +18,10 @@ public class ImportantPhoneNumbers {
 
 
 
-    private static final String[] phoneNumber = {"028961105 ","028963419","028363764","027174687"," 028059254"};
+    private static final String[] phoneNumber = {"10921","028961105 ","028963419","028363764","027174687"," 028059254"};
 
 
-    private static final String[] areaDetails = { "RAB HQ ", "RAB-1","RAB-2","RAB-3","RAB-4",""
+    private static final String[] areaDetails = { "Women and Children","RAB HQ ", "RAB-1","RAB-2","RAB-3","RAB-4"
     };
 
 
@@ -44,7 +44,7 @@ public class ImportantPhoneNumbers {
         }
 
         for (int index=0;index< phoneNumber.length;) {
-            phoneNumberModelArrayList.add(index, new PhoneNumberModel(phoneNumber[index], areaDetails[index]));
+            phoneNumberModelArrayList.add(index, new PhoneNumberModel (areaDetails[index],phoneNumber[index]));
             index++;
         }
         return phoneNumberModelArrayList;

@@ -36,8 +36,9 @@ public class EmergencyCallListAdapter extends RecyclerView.Adapter<EmergencyCall
 
     @Override
     public void onBindViewHolder(CustomViewHolder holder,final int position) {
-        holder.mNameTextView.setText(mDataSet.get(position).getmAreaName());
-        Log.d("recycler :", position + " " + mDataSet.get(position) + "");
+        holder.mPhoneNumebrTextView.setText(mDataSet.get(position).getmPhoneNumber());
+        holder.mAreaNameTextView.setText(mDataSet.get(position).getmAreaName());
+       // Log.d("recycler :", position + " " + mDataSet.get(position) + "");
 
     }
 
@@ -47,10 +48,12 @@ public class EmergencyCallListAdapter extends RecyclerView.Adapter<EmergencyCall
     }
 
     public static class  CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView mNameTextView;
+        private TextView mPhoneNumebrTextView;
+        private TextView mAreaNameTextView;
         public CustomViewHolder(View itemView) {
             super(itemView);
-            mNameTextView = (TextView) itemView.findViewById(R.id.name_text_view);
+            mPhoneNumebrTextView = (TextView) itemView.findViewById(R.id.name_text_view);
+            mAreaNameTextView = (TextView) itemView.findViewById(R.id.textViewareaId);
             itemView.setOnClickListener(this);
 
         }

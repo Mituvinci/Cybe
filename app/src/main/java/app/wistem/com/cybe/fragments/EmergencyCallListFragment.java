@@ -52,10 +52,17 @@ public class EmergencyCallListFragment extends Fragment {
             public void onItemClick(int position, View v) {
 
                 String phoneNumber = mPhoneNumberList.get(position).getmPhoneNumber();
-                Intent dial = new Intent();
+                /*Intent dial = new Intent();
                 dial.setAction("android.intent.action.DIAL");
                 dial.setData(Uri.parse("tel:" + phoneNumber));
-                startActivity(dial);
+                startActivity(dial); */
+
+
+
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:"+phoneNumber));
+                startActivity(callIntent);
+
 
             }
         });

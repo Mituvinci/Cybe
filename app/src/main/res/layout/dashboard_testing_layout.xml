@@ -27,7 +27,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:textAppearance="@style/CodeFont"
             android:text="Welcome to your dashboard! using the following menu, you can file a complaint and let us help you. Your information is secure with us."
             android:layout_gravity="center"
             android:gravity="center"
@@ -80,7 +79,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/CodeFont"
                             android:text="Emergency \nCall List"
                             android:layout_gravity="center"
                             android:gravity="center"
@@ -106,7 +104,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/CodeFont"
                             android:text="Report Cyber\n Harassment"
                             android:layout_gravity="center"
                             android:gravity="center"
@@ -151,8 +148,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/CodeFont"
-                        android:text="Enter Our\n Forum"
+                        android:text="Forum"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="@color/purple"
@@ -178,7 +174,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/CodeFont"
                         android:text="Notification and\n Settings"
                         android:layout_gravity="center"
                         android:gravity="center"
@@ -218,8 +213,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/CodeFont"
-                        android:text="Visit \nfacebook page"
+                        android:text="Facebook page"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="@color/purple"
@@ -246,8 +240,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/CodeFont"
-                        android:text="Check \nnews Feed"
+                        android:text="News Feed"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textColor="@color/purple"
