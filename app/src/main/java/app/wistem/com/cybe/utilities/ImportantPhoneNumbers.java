@@ -18,10 +18,12 @@ public class ImportantPhoneNumbers {
 
 
 
-    private static final String[] phoneNumber = {"10921","028961105 ","028963419","028363764","027174687"," 028059254"};
+    private static final String[] phoneNumber = {"10921","028961105 ","028963419","028363764","027174687"," 028059254",
+    "9133265","028631941","027453294","029880234"};
 
 
-    private static final String[] areaDetails = { "Women and Children","RAB HQ ", "RAB-1","RAB-2","RAB-3","RAB-4"
+    private static final String[] areaDetails = { "Women and\nChildren","RAB HQ ", "RAB-1","RAB-2","RAB-3","RAB-4",
+            "Adabor","Dhanmondi","Gandaria","Gulshan"
     };
 
 
